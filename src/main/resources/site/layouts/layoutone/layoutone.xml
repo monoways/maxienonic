@@ -1,0 +1,7 @@
+<layout>
+    <display-name>1-kolonne</display-name>
+    <form/>
+    <regions>
+        <region name="layout1" />
+    </regions>
+</layout>
