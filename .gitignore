@@ -92,6 +92,7 @@ crashlytics-build.properties
 
 # Node modules
 node_modules/
+node_modules_old/
 
 # Visual studio code project files
 bin/

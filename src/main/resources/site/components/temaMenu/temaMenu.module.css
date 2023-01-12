@@ -1,0 +1,30 @@
+/* .temaMenyContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    min-height: 5rem;
+    background-color: #581B5E;
+} */
+.temaItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #253777;
+    text-decoration: none;
+}
+.temaMenyContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "temaItem temaItem temaItem temaItem" "temaItem temaItem temaItem temaItem";
+    grid-gap: 1rem;
+    min-height: 5rem;
+    width: 100vw;
+    text-align: center;
+    box-shadow: 0 2px 3px -3px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+    /* padding: 0 2rem; */
+}

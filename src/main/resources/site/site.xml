@@ -13,5 +13,5 @@
 
     -->
   </mappings>
-
+  <x-data name="menu-item" />
 </site>

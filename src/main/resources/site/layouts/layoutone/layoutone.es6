@@ -5,9 +5,9 @@ const libs = {
   
   exports.get = (req) => {
     const component = libs.portal.getComponent();
-  
+
     return libs.react4xp.render(
-      'site/layouts/layout-1-col/layout-1-col',
+      component,
       {
         regionsData: component.regions,
         names: 'layout1'

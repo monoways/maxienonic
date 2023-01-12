@@ -2,9 +2,15 @@
 import React from 'react';
 //import {toStr} from '@enonic/js-utils/dist/cjs';
 import Regions from '@enonic/react-components/Regions';
+import Logo from '../../../assets/images/logo.svg';
+import Menu from '../../components/menu.jsx';
+import Burgermenu from '../../components/hamburger/nav.jsx';
+import BreadcrumbMenu from '../../components/breadcrumbMenu/breadcrumbMenu.jsx';
+import TemaMenu from '../../components/temaMenu/temaMenu.jsx';
+import Header from '../../parts/header/header.jsx';
+import Footer from '../../components/Footer.jsx';
 
 import './css/default.css';
-
 
 /*function testNashornPolyfills() {
   console.debug('context', toStr(context)); // undefined
@@ -57,10 +63,33 @@ import './css/default.css';
 
 
 export default (props) => {
+  const menuItems = props.menuItems.menuItems;
+  // console.log(JSON.stringify(menuItems), 'menuItems.hasChildren');
+  // console.log(JSON.stringify(props.content), 'props.content');
+  // console.log(JSON.stringify(props.breadcrumbItems), 'props.breadcrumItems');
   //testNashornPolyfills();
+
+  const onTemaPath = props.content._path.match(/\/selfi\/brukere\/tema/);
+  console.log('onTemaPath', onTemaPath);
+
+  // find all menuitems that are children of the element in menuItems that has the title "Brukere"
+  const brukere = menuItems.find(item => item.title === 'Brukere');
+  // if brukere has children, find the one that has the title "Tema" and return its children
+  const tema = brukere && brukere.children && brukere.children.find(item => item.title === 'Tema');
+
   return (
-    <div className="default-page">
-        <Regions {...props} />
-    </div>
+      <div style={{backgroundColor: props.backgroundColor}} className="default-page">
+          {/* <header className='header'>
+            <img className="header-logo" src={Logo} alt="logo" />
+            <Menu menuItems={menuItems}/>
+            <Burgermenu menuItems={menuItems}/>
+          </header> */}
+          {/* <Header menuItems={menuItems} /> */}
+          <Regions {...props} />
+          {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
+          {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
+          <Regions {...props} />
+          <Footer />
+      </div>
   );
 };

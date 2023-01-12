@@ -39,6 +39,7 @@ dependencies {
     include "com.enonic.lib:lib-guillotine:5.5.0"
 
     include "com.enonic.lib:lib-react4xp:3.3.0"
+    include 'com.enonic.lib:lib-menu:4.1.1'
 }
 
 sourceSets {

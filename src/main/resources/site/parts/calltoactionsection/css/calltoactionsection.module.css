@@ -1,0 +1,63 @@
+.sectionContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sectionLeft sectionRight";
+    height: 100%;
+    min-height: 30vh;
+    width: 100%;
+    background-color: #B3CEE4;
+    padding: 0 0 0 0;
+    margin: 2.5rem auto;
+}
+.sectionLeft {
+    grid-area: sectionLeft;
+    width: 100%;
+    height: 100%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+.sectionRight {
+    grid-area: sectionRight;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.sectionText {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.sectionLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sectionLink::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #000000;
+    margin-left: 10px;
+}

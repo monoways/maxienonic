@@ -38,7 +38,26 @@ module.exports = function(env, config) {
                         },
                     }
                 ]
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'svg-url-loader',
+                        options: {
+                            encoding: 'base64',
+                            limit: 10000,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(jpg|png)$/,
+                loader: 'url-loader',
+                options: {
+                  limit: 25000,
+                },
+            },
         ];
     
         // Set up how the compiled assets are exported:

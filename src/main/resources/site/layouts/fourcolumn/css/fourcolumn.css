@@ -1,0 +1,26 @@
+.regions-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.left-region {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+}
+.middle-region {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+}
+.right-region {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+}

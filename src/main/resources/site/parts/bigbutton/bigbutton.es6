@@ -8,6 +8,7 @@ exports.get = function(request) {
     const props = { 
         text: component.config.text,
         buttonstyle: component.config.buttonstyle,
+        link: component.config.link,
         };
 
     return React4xp.render(

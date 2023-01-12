@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>call to action bar/slide for text and a button</display-name>
+    <description>Component to show some text and a button in a small section</description>
+    <form>
+        <input name="title" type="TextLine">
+            <label>Title</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>My title</default>
+        </input>
+        <input name="text" type="TextLine">
+            <label>text</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Lorem ipsum dolor sit amnet</default>
+        </input>
+        <input name="link" type="TextLine">
+            <label>Link</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>#</default>
+        </input>
+    </form>
+</part>

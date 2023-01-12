@@ -1,23 +1,29 @@
 const portal = require('/lib/xp/portal');
 const React4xp = require('/lib/enonic/react4xp');
+const menu = require('/lib/menu');
+
 
 exports.get = function(request) {
 
     const component = portal.getComponent();
 
-    // const props = { color: component.config.color };
+    let menuItems = menu.getMenuTree(3);
+
+    const props = {
+        menuItems: menuItems,
+    };
 
     return React4xp.render(
         component,
-        // props,
+        props,
         request,
         {                               
-            clientRender: false, 
-            body: `
-                <header>
+            clientRender: true, 
+            // body: `
+            //     <header>
 
-                </header>
-            `        
+            //     </header>
+            // `        
             // pageContributions: {        
             //     bodyEnd: `<script>console.log("The color of the thing is: ${component.config.color}");</script>`
             // }
