@@ -26,8 +26,10 @@ exports.get = function(request) {
 
     const props = {
         regionsData: content.page.regions,
-        names: "main",
-        tag: "main",
+        // mainRegion: content.page.regions["main"],
+        // headerRegion: content.page.regions["header"],
+        names: ["header", "main"],
+        // tag: "main",
         backgroundColor: pageConfig.backgroundColor,
         menuItems: menuItems,
         breadcrumbItems: breadcrumbItems,

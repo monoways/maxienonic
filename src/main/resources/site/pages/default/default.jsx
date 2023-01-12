@@ -11,6 +11,7 @@ import Header from '../../parts/header/header.jsx';
 import Footer from '../../components/Footer.jsx';
 
 import './css/default.css';
+import Region from '@enonic/react-components/Region';
 
 /*function testNashornPolyfills() {
   console.debug('context', toStr(context)); // undefined
@@ -85,11 +86,12 @@ export default (props) => {
             <Burgermenu menuItems={menuItems}/>
           </header> */}
           {/* <Header menuItems={menuItems} /> */}
-          <Regions {...props} />
+          <Region name='header' regionData={props.regionsData['header']} {...props} />
           {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
           {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
-          <Regions {...props} />
+          <Region name='main'regionData={props.regionsData['main']} {...props} />
           <Footer />
       </div>
   );
 };
+// regionData={props.headerRegion}

@@ -1,10 +1,10 @@
 import react from "react";
 
-export default (props) => {
+export default ({ menuItems }) => {
     // check to see if hasChildren is true for any items in the menuItems array, and then check if hasChildren is true for any items in the children array
     // return a number based on how many layers of children there are
     // this doesnt work yet, only returns 1
-    const layersOfChildren = props.menuItems.reduce((acc, item) => {
+    const layersOfChildren = menuItems.reduce((acc, item) => {
         if (item.hasChildren) {
             const children = item.children.reduce((acc, child) => {
                 if (child.hasChildren) {
@@ -21,7 +21,7 @@ export default (props) => {
     if (layersOfChildren === 0) {
         return (
             <ul className='menu-items'>
-                {props.menuItems.map((item, index) => {
+                {menuItems.map((item, index) => {
                     <li><a key={index} href={item.url}>{item.title}</a></li>
                 })}
             </ul>
@@ -33,7 +33,7 @@ export default (props) => {
         return (
             <nav className='nav'>
             <ul className='menu-items'>
-                {props.menuItems.map((item, index) => {
+                {menuItems.map((item, index) => {
                     return (
                         <div className='dropdown'>
                             <li><a href={item.url} className='dropdownbtn menu-item'>{item.title}</a></li>
@@ -55,7 +55,7 @@ export default (props) => {
     }
     
     // return (
-    //     props.menuItems.map((item, index) => {
+    //     menuItems.map((item, index) => {
     //         return item.hasChildren ? (
     //           <div className='dropdown'>
     //            <li><a href={item.url} className='dropdownbtn menu-item'>{item.title}</a></li>
