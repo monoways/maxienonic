@@ -40,6 +40,7 @@ exports.get = function(request) {
                 <html>
                     <head>
                         <meta charset="UTF-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                         <title>${content.displayName}</title>
                         <base href="${portal.assetUrl({path: ''})}" />
                         <link type="text/css" href="${portal.assetUrl({path: 'css/default.css'})}" />

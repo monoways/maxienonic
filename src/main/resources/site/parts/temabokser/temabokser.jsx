@@ -4,6 +4,14 @@ import styles from './css/temabokser.module.css';
 
 export default (props) => {
 
+    const menuItems = props.menuItems.menuItems;
+
+    const brukere = menuItems.find(item => item.title === 'Brukere');
+    const tema = brukere && brukere.children && brukere.children.find(item => item.title === 'Tema');
+
+    const handleClick = (url) => {
+        window.location.href = url;
+    }
 
     // Did it this way because i couldnt make the iterating classnames work properly with the css modules
     const boksConfig = [
@@ -50,9 +58,9 @@ export default (props) => {
     ];
 
     const temaBoks = (index) => (
-        <div style={{backgroundColor: boksConfig[index].backgroundColor}} className={styles.temaBoks}>
-            <h2 className={styles.temaBoksTitle}>{boksConfig[index].title}</h2>
-            <p className={styles.temaBoksText}>{boksConfig[index].text}</p>
+        <div onClick={() => { handleClick(tema.children[index].url) }} style={{backgroundColor: boksConfig[index].backgroundColor}} className={styles.temaBoks}>
+            <h2 className={styles.temaBoksTitle}>{tema.children[index].title}</h2>
+            {/* <p className={styles.temaBoksText}>{tema.children[index].text}</p> */}
         </div>
     );
 

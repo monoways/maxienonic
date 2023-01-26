@@ -30,12 +30,12 @@
     bottom: 0;
 }
 
-.navigation {
+/* .navigation {
 
 }
 .navigation__item {
 
-}
+} */
 
 /* make the hamburger only visible on smaller screens */
 @media (max-width: 768px) {

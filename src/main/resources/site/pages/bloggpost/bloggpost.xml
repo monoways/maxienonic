@@ -3,6 +3,7 @@
   <description>Blogg controller</description>
   <form/>
   <regions>
+    <region name="header"/>
     <region name="main"/>
   </regions>
 </page>

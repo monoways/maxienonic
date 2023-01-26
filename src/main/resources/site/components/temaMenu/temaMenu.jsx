@@ -3,6 +3,8 @@ import styles from './temaMenu.module.css';
 
 export default ({ menuItems, backgroundColor }) => {
 
+    // console.log(JSON.stringify(menuItems), 'these are the menuItems for the topic menu');
+
     const darkerBG = () => {
         // if backgroundColor is undefined, return a default color
         if (!backgroundColor) {
@@ -21,9 +23,15 @@ export default ({ menuItems, backgroundColor }) => {
     return (
         <div style={{backgroundColor: darkerBG()}} className={styles.temaMenyContainer}>
             {menuItems.map((item, index) => {
-                return (
-                    <a className={styles.temaItem} key={index} href={item.url}>{item.title}</a>
-                )
+                    if (item.isActive) {
+                        return (
+                            <a className={styles.temaItemActive} key={index} href={item.url}>{item.title}</a>
+                        )
+                    } else {
+                        return ( 
+                            <a className={styles.temaItem} key={index} href={item.url}>{item.title}</a>
+                        )
+                    }
             })}
         </div>
     )

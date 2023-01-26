@@ -16,6 +16,15 @@
     color: #253777;
     text-decoration: none;
 }
+.temaItemActive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #253777;
+    text-decoration: underline;
+}
 .temaMenyContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

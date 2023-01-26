@@ -70,6 +70,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 }
 .temaBoksTitle {
     font-size: 1.5rem;
@@ -88,8 +89,11 @@
 
 @media only screen and (max-width: 1000px) {
     .temaBokser {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "temaBoks temaBoks" "temaBoks temaBoks" "temaBoks temaBoks" "temaBoks temaBoks";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-areas: "temaBoks temaBoks" "temaBoks temaBoks" "temaBoks temaBoks" "temaBoks temaBoks"; */
+    }
+    .temaBoks {
+        margin: auto;
     }
 }

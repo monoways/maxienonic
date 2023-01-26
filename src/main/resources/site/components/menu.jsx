@@ -1,58 +1,94 @@
 import react from "react";
 
 export default ({ menuItems }) => {
-    // check to see if hasChildren is true for any items in the menuItems array, and then check if hasChildren is true for any items in the children array
-    // return a number based on how many layers of children there are
-    // this doesnt work yet, only returns 1
-    const layersOfChildren = menuItems.reduce((acc, item) => {
+
+    const menuItemsArray = [];
+    // makes a flat array of all menu items
+    menuItems.forEach((item) => {
+        item.layer = 0;
+        menuItemsArray.push(item);
         if (item.hasChildren) {
-            const children = item.children.reduce((acc, child) => {
+            item.children.forEach((child) => {
+                child.layer = 1;
+                child.father = item.title;
+                menuItemsArray.push(child);
                 if (child.hasChildren) {
-                    return acc + 1;
+                    child.children.forEach((child2) => {
+                        child2.father = child.title;
+                        child2.layer = 2;
+                        menuItemsArray.push(child2);
+                    })
                 }
-                return acc;
-            }, 0);
-            return acc + children;
+            })
         }
-        return acc;
-    }, 0);
-    console.log(layersOfChildren, 'layersOfChildren in the menu, currently does not work');
-    // if there are no layers of children, return a simple menu
-    if (layersOfChildren === 0) {
-        return (
-            <ul className='menu-items'>
-                {menuItems.map((item, index) => {
-                    <li><a key={index} href={item.url}>{item.title}</a></li>
-                })}
-            </ul>
-        );
+    })
+
+    // finds the active menu item
+    const activeMenuItem = menuItemsArray.find(item => item.isActive);
+
+    // Hardcoded menu items to display on the desktop menu, to find them you have to use the exact title of the menu item in enonic 
+    const menuItemsToRender = {
+        hjem: menuItemsArray.find(item => item.title === 'Hjem'),
+        tema: menuItemsArray.find(item => item.title === 'Tema'),
+        om: menuItemsArray.find(item => item.title === 'Om SELFI'),
+        materiale: menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
     }
 
-    // if there are layers of children, return a menu with dropdowns
-    if (layersOfChildren === 1) {
-        return (
-            <nav className='nav'>
+    return (
+        <nav className='nav'>
             <ul className='menu-items'>
-                {menuItems.map((item, index) => {
-                    return (
-                        <div className='dropdown'>
-                            <li><a href={item.url} className='dropdownbtn menu-item'>{item.title}</a></li>
-                            <div className='dropdownContent'>
-                                {item.children.map((child, index) => {
-                                    return (
-                                        <a key={`bottom-${index}`} href={child.url}>
-                                            {child.title}
-                                        </a>
-                                    );
-                                })}
+                {/* loop over menuItemsToRender object, and if the current keys object has children, render a dropdown */}
+                {Object.keys(menuItemsToRender).map((key) => {
+                    const menuItem = menuItemsToRender[key];
+                    if (menuItem.hasChildren) {
+                        return (
+                            <div className='dropdown'>
+                                <li><a href={menuItem.url} className='dropdownbtn menu-item'>{menuItem.title}</a></li>
+                                <div className='dropdownContent'>
+                                    {menuItem.children.map((child, index) => {
+                                        return (
+                                            <a key={index} href={child.url}>{child.title}</a>
+                                        )
+                                    })}
+                                </div>
                             </div>
-                        </div>
-                    )
+                        )
+                    } else {
+                        return (
+                            <li><a href={menuItem.url} className='dropdownbtn menu-item'>{menuItem.title}</a></li>
+                        )
+                    }
                 })}
             </ul>
         </nav>
-        );
-    }
+    )
+
+
+    // if there are layers of children, return a menu with dropdowns
+    // if (layersOfChildren === 1) {
+    //     return (
+    //         <nav className='nav'>
+    //         <ul className='menu-items'>
+    //             {menuItems.map((item, index) => {
+    //                 return (
+    //                     <div className='dropdown'>
+    //                         <li><a href={item.url} className='dropdownbtn menu-item'>{item.title}</a></li>
+    //                         <div className='dropdownContent'>
+    //                             {item.children.map((child, index) => {
+    //                                 return (
+    //                                     <a key={`bottom-${index}`} href={child.url}>
+    //                                         {child.title}
+    //                                     </a>
+    //                                 );
+    //                             })}
+    //                         </div>
+    //                     </div>
+    //                 )
+    //             })}
+    //         </ul>
+    //     </nav>
+    //     );
+    // }
     
     // return (
     //     menuItems.map((item, index) => {

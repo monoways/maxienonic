@@ -8,7 +8,7 @@ import Burgermenu from '../../components/hamburger/nav.jsx';
 import BreadcrumbMenu from '../../components/breadcrumbMenu/breadcrumbMenu.jsx';
 import TemaMenu from '../../components/temaMenu/temaMenu.jsx';
 import Header from '../../parts/header/header.jsx';
-import Footer from '../../components/Footer.jsx';
+import Footer from '../../components/footer/Footer.jsx';
 
 import './css/default.css';
 import Region from '@enonic/react-components/Region';
@@ -71,7 +71,7 @@ export default (props) => {
   //testNashornPolyfills();
 
   const onTemaPath = props.content._path.match(/\/selfi\/brukere\/tema/);
-  console.log('onTemaPath', onTemaPath);
+  // console.log('onTemaPath', onTemaPath);
 
   // find all menuitems that are children of the element in menuItems that has the title "Brukere"
   const brukere = menuItems.find(item => item.title === 'Brukere');
@@ -87,8 +87,8 @@ export default (props) => {
           </header> */}
           {/* <Header menuItems={menuItems} /> */}
           <Region name='header' regionData={props.regionsData['header']} {...props} />
-          {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
           {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
+          {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
           <Region name='main'regionData={props.regionsData['main']} {...props} />
           <Footer />
       </div>

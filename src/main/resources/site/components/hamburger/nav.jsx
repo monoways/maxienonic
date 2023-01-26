@@ -1,5 +1,7 @@
 import react, { useState, useRef, useEffect } from "react";
 
+import MobileMenu from "../mobileMenu/MobileMenu.jsx";
+
 // import styles from "./Hamburger.module.css";
 
 import Hamburger from "./Hamburger.jsx";
@@ -9,7 +11,6 @@ export default (props) => {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        console.log('menu toggled to ', menuOpen);
     }
 
 

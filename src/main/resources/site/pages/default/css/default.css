@@ -14,21 +14,6 @@ h2 {
     color: #fff;
     height: 100%;
 }
-.menu-items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-}
-.menu-item {
-  margin: 0 1rem;
-  font-size: large;
-}
-.menu-item a {
-  color: black;
-  text-decoration: none;
-}
 
 /* headerstyling */
 .header {
@@ -41,7 +26,7 @@ h2 {
   font-size: 1rem;
 }
 .header-logo {
-  width: 18rem;
+  width: 15rem;
 }
 
 /* navigation styling */
@@ -69,6 +54,10 @@ h2 {
   text-decoration: none;
   color: #000;
 }
+.menu-item a {
+  color: black;
+  text-decoration: none;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -93,78 +82,8 @@ h2 {
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdownContent {display: block;}
 /* .dropdown:hover .dropdownbtn {background-color: #3e8e41;} */
-
-
-/* footerstyling */
-.footerContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  /* align-items: center; */
-  padding: 1rem;
-  background-color: #f5f5f5;
-  border-top: 1px solid #e5e5e5;
-  font-size: 1rem;
-}
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer-section h5 {
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-section li {
-  margin-bottom: 0.5rem;
-}
-.footer-section a {
-  color: #333;
-  text-decoration: none;
-}
-.footer-section a:hover {
-  color: #000;
-  text-decoration: none;
-}
-.footer-section a:active {
-  color: #000;
-  text-decoration: none;
-}
-.footer-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.footer-menu-header {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 1rem;
-  line-height: 27px;
-}
-.footer-menu p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
-  margin-bottom: 1rem;
-  color: #253777;
-}
-.footer-logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.footer-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.mobileMenu {
+  display: none;
 }
 
 /* button styles for primary and secondary buttons */
@@ -195,6 +114,11 @@ h2 {
   cursor: pointer;
 }
 
+/* no scroll for body when menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* hide the menu and nav for mobile sizes */
 @media (max-width: 768px) {
   .nav {
@@ -202,5 +126,8 @@ h2 {
   }
   .menu {
     display: none;
+  }
+  .mobileMenu {
+    display: block;
   }
 }
