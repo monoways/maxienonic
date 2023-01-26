@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Menu from '../../components/menu.jsx';
 import Burgermenu from '../../components/hamburger/nav.jsx';
-import MobileMenu from '../../components/mobileMenu/mobileMenu.jsx';
+import MobileMenu from '../../components/mobileMenu/MobileMenu.jsx';
 import Logo from '../../../assets/images/logo.svg';
 
 export default (props) => {
