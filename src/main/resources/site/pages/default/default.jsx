@@ -3,7 +3,7 @@ import React from 'react';
 //import {toStr} from '@enonic/js-utils/dist/cjs';
 import BreadcrumbMenu from '../../components/breadcrumbMenu/breadcrumbMenu.jsx';
 import TemaMenu from '../../components/temaMenu/temaMenu.jsx';
-import BannerMenu from '../../components/bannerMenu/bannermenu.jsx';
+import BannerMenu from '../../components/bannermenu/bannermenu.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 
 import './css/default.css';
