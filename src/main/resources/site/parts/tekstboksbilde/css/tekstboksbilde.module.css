@@ -15,10 +15,10 @@
     position: absolute;
     top: 5;
     left: 5;
-    width: 20rem;
-    height: fit-content;
-    min-width: 20rem;
-    min-height: 10rem;
+    /* width: 20rem; */
+    /* height: fit-content; */
+    /* min-width: 20rem; */
+    /* min-height: 10rem; */
     display: flex;
     flex-direction: column;
     padding: 1rem;

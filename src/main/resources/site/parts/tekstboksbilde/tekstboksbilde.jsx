@@ -19,12 +19,7 @@ export default (props) => {
         textBox: {
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             position: "absolute",
-            top: "5",
-            left: "5",
-            width: "20rem",
-            height: "10rem",
-            minWidth: "20rem",
-            minHeight: "fit-content",
+            maxWidth: "20rem",
             display: "flex",
             flexDirection: "column",
             padding: "1rem",
