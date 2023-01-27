@@ -13,53 +13,37 @@ export default (props) => {
         window.location.href = url;
     }
 
-    // Did it this way because i couldnt make the iterating classnames work properly with the css modules
-    const boksConfig = [
-        {
-            title: 'Søvn',
-            text: 'Generic Description',
-            backgroundColor: '#FFF6CC',
-        },
-        {
-            title: 'Avspenning',
-            text: 'Generic Description',
-            backgroundColor: '#C5DFB8',
-        },
-        {
-            title: 'Depresjon',
-            text: 'Generic Description',
-            backgroundColor: '#89D0BF',
-        },
-        {
-            title: 'Angst',
-            text: 'Generic Description',
-            backgroundColor: '#B3CEE4',
-        },
-        {
-            title: 'Traumer',
-            text: 'Generic Description',
-            backgroundColor: '#B3CEE4',
-        },
-        {
-            title: 'Hjelp og Støtte',
-            text: 'Generic Description',
-            backgroundColor: '#89D0BF',
-        },
-        {
-            title: 'Problemeløsning',
-            text: 'Generic Description',
-            backgroundColor: '#C5DFB8',
-        },
-        {
-            title: 'Kontakt andre',
-            text: 'Generic Description',
-            backgroundColor: '#FFF6CC',
-        },
-    ];
+    // Horrible i know, but it works for now
+    const colorConfig = [
+        '#FFF6CC',
+        '#C5DFB8',  
+        '#89D0BF',
+        '#B3CEE4',
+        '#B3CEE4',
+        '#89D0BF',
+        '#C5DFB8',
+        '#FFF6CC',
+        '#FFF6CC',
+        '#C5DFB8',  
+        '#89D0BF',
+        '#B3CEE4',
+        '#B3CEE4',
+        '#89D0BF',
+        '#C5DFB8',
+        '#FFF6CC',
+        '#FFF6CC',
+        '#C5DFB8',  
+        '#89D0BF',
+        '#B3CEE4',
+        '#B3CEE4',
+        '#89D0BF',
+        '#C5DFB8',
+        '#FFF6CC',
+    ]
 
-    const temaBoks = (index) => (
-        <div onClick={() => { handleClick(tema.children[index].url) }} style={{backgroundColor: boksConfig[index].backgroundColor}} className={styles.temaBoks}>
-            <h2 className={styles.temaBoksTitle}>{tema.children[index].title}</h2>
+    const temaBoks = (item, index) => (
+        <div onClick={() => { handleClick(item.url) }} style={{backgroundColor: colorConfig[index]}} className={styles.temaBoks}>
+            <h2 className={styles.temaBoksTitle}>{item.title}</h2>
             {/* <p className={styles.temaBoksText}>{tema.children[index].text}</p> */}
         </div>
     );
@@ -75,9 +59,15 @@ export default (props) => {
                 </div>
             </div>
             <div className={styles.temaBokser}>
-                {Array.from(Array(8).keys()).map((index) => (
-                    temaBoks(index)
-                ))}
+                {tema.children.map((item, index) => {
+                    return (
+                        temaBoks(item, index)
+                    )
+                }
+                )}
+                {/* // {Array.from(Array(8).keys()).map((index) => (
+                //     temaBoks(index)
+                // ))} */}
             </div>
         </div>
     );
