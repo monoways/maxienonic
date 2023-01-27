@@ -61,6 +61,7 @@
 .arrow {
     width: 48px;
     height: 48px;
+    cursor: pointer;
 }
 
 /* on desktop, make the sectionLeft have a margin-left of 10rem */

@@ -8,7 +8,10 @@ exports.get = function(request) {
     const props = {
         title: component.config.title,
         text: component.config.text, 
-        image: component.config.image,
+        image: component.config.image ? portal.imageUrl({
+            id: component.config.image,
+            scale: 'width(800)'
+        }) : '',
     };
 
     return React4xp.render(

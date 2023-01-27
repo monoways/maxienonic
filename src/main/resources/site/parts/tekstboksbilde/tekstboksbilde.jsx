@@ -7,7 +7,7 @@ export default (props) => {
         sectionContainer: {
             width: "90%",
             margin: "auto",
-            backgroundImage: "url('https://www.mooc.org/hubfs/psych-fields-jpg.jpeg')",
+            backgroundImage: `url('${props.image}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -24,7 +24,7 @@ export default (props) => {
             width: "20rem",
             height: "10rem",
             minWidth: "20rem",
-            minHeight: "10rem",
+            minHeight: "fit-content",
             display: "flex",
             flexDirection: "column",
             padding: "1rem",

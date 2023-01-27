@@ -50,6 +50,7 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     /* display: grid; */
     /* the boxes should have some space between them and also to the sides of the viewport */
     /* grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -18,11 +18,7 @@ export default (props) => {
                 <p className={styles.sectionText}>{props.text2}</p>
             </div>
             <div className={styles.sectionRight}>
-                {/* use fontawesome to insert a right arrow */}
                 <FontAwesomeIcon icon={faArrowRight} className={styles.arrow} onClick={() => handleRedirect(props.url)} />
-                {/* <FontAwesomeIcon icon="fa-solid fa-arrow-right" className={styles.arrow} onClick={() => handleRedirect(props.url)} /> */}
-                {/* <Arrow className={styles.arrow} onClick={() => {handleRedirect(props.link)}} /> */}
-                {/* <a className={styles.sectionLink} href={props.link}>{props.link}</a> */}
             </div>
         </div>
     )
