@@ -7,7 +7,8 @@ exports.get = function(request) {
 
     const props = {
         title: component.config.title,
-        text: component.config.text, 
+        text: component.config.text,
+        text2: component.config.text2, 
         link: component.config.link,
     };
 

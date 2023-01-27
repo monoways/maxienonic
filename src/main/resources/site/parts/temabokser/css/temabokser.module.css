@@ -48,12 +48,14 @@
 .temaBokser {
     /* width: 95%; */
     height: 100%;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid; */
     /* the boxes should have some space between them and also to the sides of the viewport */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "temaBoks temaBoks temaBoks temaBoks" "temaBoks temaBoks temaBoks temaBoks";
-    grid-gap: 1rem;
+    grid-gap: 1rem; */
     /* padding: 0 2rem; */
 }
 .temaBoks {
@@ -63,7 +65,7 @@
     min-width: 10rem;
     max-width: 20rem;
     border-radius: 6px;
-    margin: 0 0 0 0;
+    margin: 1rem;
     padding: 0 0 0 0;
     display: flex;
     flex-direction: column;
@@ -88,12 +90,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .temaBokser {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        /* grid-template-areas: "temaBoks temaBoks" "temaBoks temaBoks" "temaBoks temaBoks" "temaBoks temaBoks"; */
-    }
     .temaBoks {
-        margin: auto;
+        margin: 1rem;
     }
 }

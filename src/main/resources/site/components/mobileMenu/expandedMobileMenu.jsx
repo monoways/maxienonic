@@ -38,7 +38,7 @@ export default (props) => {
 
     return (
         <div className={styles.container}>
-            <button className={styles.closeBtn} onClick={props.toggleMobileMenu}>X</button>
+            {/* <button className={styles.closeBtn} onClick={props.toggleMobileMenu}>X</button> */}
             <ul className={styles.menuList}>
                 {Object.keys(menuItems).map((item, index) => {
                     return (

@@ -13,6 +13,11 @@
             <occurrences minimum="1" maximum="1"/>
             <default>Lorem ipsum dolor sit amnet</default>
         </input>
+        <input name="text2" type="TextLine">
+            <label>text line 2</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Lorem ipsum dolor sit amnet</default>
+        </input>
         <input name="link" type="TextLine">
             <label>Link</label>
             <occurrences minimum="1" maximum="1"/>

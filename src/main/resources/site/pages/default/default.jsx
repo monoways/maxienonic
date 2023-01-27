@@ -1,13 +1,9 @@
 /** Wraps Regions from https://www.npmjs.com/package/react4xp-regions */
 import React from 'react';
 //import {toStr} from '@enonic/js-utils/dist/cjs';
-import Regions from '@enonic/react-components/Regions';
-import Logo from '../../../assets/images/logo.svg';
-import Menu from '../../components/menu.jsx';
-import Burgermenu from '../../components/hamburger/nav.jsx';
 import BreadcrumbMenu from '../../components/breadcrumbMenu/breadcrumbMenu.jsx';
 import TemaMenu from '../../components/temaMenu/temaMenu.jsx';
-import Header from '../../parts/header/header.jsx';
+import BannerMenu from '../../components/bannerMenu/bannermenu.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 
 import './css/default.css';
@@ -87,6 +83,7 @@ export default (props) => {
           </header> */}
           {/* <Header menuItems={menuItems} /> */}
           <Region name='header' regionData={props.regionsData['header']} {...props} />
+          <BannerMenu menuItems={menuItems} />
           {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
           {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
           <Region name='main'regionData={props.regionsData['main']} {...props} />

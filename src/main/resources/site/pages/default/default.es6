@@ -44,6 +44,7 @@ exports.get = function(request) {
                         <title>${content.displayName}</title>
                         <base href="${portal.assetUrl({path: ''})}" />
                         <link type="text/css" href="${portal.assetUrl({path: 'css/default.css'})}" />
+                        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css" />
                     </head>
                     <body class="xp-page">
                         <div id="${id}"></div>

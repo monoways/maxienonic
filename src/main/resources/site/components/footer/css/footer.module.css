@@ -1,6 +1,7 @@
 .footerContainer {
-    position: absolute;
-    width: 100vw;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* width: 100vw; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -73,6 +74,8 @@
   @media (max-width: 768px) {
     .footerContainer {
       flex-direction: column;
+      position: relative;
+      width: inherit;
       /* align-items: center; */
     }
     .footerSection {
