@@ -18,5 +18,11 @@
             <occurrences minimum="1" maximum="1"/>
             <config></config>
         </input>
+        <!-- file upload for a pdf -->
+        <input name="pdf" type="AttachmentUploader">
+            <label>PDF</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config></config>
+        </input>
     </form>
 </part>

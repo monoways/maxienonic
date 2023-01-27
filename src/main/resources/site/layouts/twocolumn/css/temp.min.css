@@ -479,10 +479,10 @@ body.home header .header-wrapper .menu-wrapper ul li a {
   color: var(--modeColor_3);
 }
 body.page-sustainability header .header-wrapper .menu-wrapper ul li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--modeMenu_1);
 }
 body.page-sustainability header .header-wrapper .menu-wrapper ul li.current-menu-item a {
-  color: #fff;
+  color: var(--modeColor_3);
 }
 body.page-sustainability header.backgroundHeader .header-wrapper {
   padding: 15px 60px 15px 80px;
@@ -1329,7 +1329,7 @@ body.page-sustainability header .header-wrapper .header-onscroll {
     cursor: pointer;
   }
   body header .header-wrapper .menu--hamburger-mobile.is-open .navbar__button--mobile svg path {
-    stroke: #fff;
+    stroke: #fff !important;
   }
   body header .header-wrapper .mode-wrapper {
     position: absolute;
@@ -1378,7 +1378,7 @@ body.page-sustainability header .header-wrapper .header-onscroll {
     .navbar__button--mobile
     svg
     path {
-    stroke: #fff !important;
+    stroke: var(--modeColor_3);
   }
 }
 @media screen and (min-width: 992px) {

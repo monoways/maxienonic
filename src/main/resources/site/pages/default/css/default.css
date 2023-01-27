@@ -56,6 +56,9 @@ h2 {
   text-decoration: none;
   color: #000;
 }
+.menu-item:hover {
+  color: rgba(255,255,255,0.8);
+}
 .menu-item a {
   color: black;
   text-decoration: none;

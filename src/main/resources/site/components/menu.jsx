@@ -1,6 +1,8 @@
 import react from "react";
 
 export default ({ menuItems }) => {
+    // THIS IS NO LONGER IN USE, BUT IS KEPT FOR REFERENCE
+    // THIS MENU WOULD BE USED IF WE WANTED A MENU IN THE HEADER TO THE RIGHT OF THE LOGO
 
     const menuItemsArray = [];
     // makes a flat array of all menu items

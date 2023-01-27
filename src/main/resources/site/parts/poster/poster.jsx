@@ -16,20 +16,14 @@ export default (props) => {
             <div className={styles.posterTextContainer}>
                 <h2 className={styles.posterTitle}>{props.title}</h2>
                 <p className={styles.posterText}>{props.text}</p>
-                <a className={styles.downloadLink} href="#">Last ned</a>
-                {/* <Button text={props.buttonText} link={props.buttonLink} /> */}
+                <a className={styles.downloadLink} href={props.pdf} download>Last ned</a>
             </div>
         </div>
     )
 
     return (
         <>
-        {/* <div className={styles.posterGallery}> */}
             {poster}
-            {/* {poster} */}
-            {/* {poster} */}
-            {/* {poster} */}
-        {/* </div> */}
         </>
     )
 }

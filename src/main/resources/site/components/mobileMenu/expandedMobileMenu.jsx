@@ -34,6 +34,7 @@ export default (props) => {
             tema: props.menuItemsArray.find(item => item.title === 'Tema'),
             // produkter: props.menuItemsArray.find(item => item.title === 'Våre Produkter'),
             omOss: props.menuItemsArray.find(item => item.title === 'Om SELFI'),
+            materiale: props.menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
         }
 
     return (

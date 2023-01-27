@@ -3,8 +3,6 @@ import styles from './temaMenu.module.css';
 
 export default ({ menuItems, backgroundColor }) => {
 
-    // console.log(JSON.stringify(menuItems), 'these are the menuItems for the topic menu');
-
     const darkerBG = () => {
         // if backgroundColor is undefined, return a default color
         if (!backgroundColor) {

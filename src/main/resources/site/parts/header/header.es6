@@ -6,11 +6,16 @@ const menu = require('/lib/menu');
 exports.get = function(request) {
 
     const component = portal.getComponent();
+    const content = portal.getContent();
+    const pageConfig = (content.page || {}).config || {};
+
 
     let menuItems = menu.getMenuTree(3);
 
     const props = {
         menuItems: menuItems,
+        backgroundColor: pageConfig.backgroundColor,
+        content: content,
     };
 
     return React4xp.render(

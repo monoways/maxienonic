@@ -83,7 +83,7 @@ export default (props) => {
           </header> */}
           {/* <Header menuItems={menuItems} /> */}
           <Region name='header' regionData={props.regionsData['header']} {...props} />
-          <BannerMenu menuItems={menuItems} />
+          {/* <BannerMenu menuItems={menuItems} /> */}
           {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
           {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
           <Region name='main'regionData={props.regionsData['main']} {...props} />

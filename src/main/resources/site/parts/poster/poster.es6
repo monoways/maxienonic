@@ -8,6 +8,10 @@ exports.get = function(request) {
     const props = {
         title: component.config.title,
         text: component.config.text, 
+        pdf: component.config.pdf ? portal.attachmentUrl({
+            download: true,
+            name: component.config.pdf,
+        }) : '',
         image: component.config.image ? portal.imageUrl({
             id: component.config.image,
             scale: 'width(500)'
