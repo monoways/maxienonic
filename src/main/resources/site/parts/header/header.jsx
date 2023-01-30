@@ -39,7 +39,9 @@ export default (props) => {
     return (
         <>
         <header className='header'>
-            <img className="header-logo" src={Logo} alt="logo" href={homeLink} />
+            <a href={menuItems[0].url}>
+                <img className="header-logo" src={Logo} alt="logo and homelink"/>
+            </a>
             {/* <Menu menuItems={menuItems}/> */}
             {/* <Burgermenu menuItems={menuItems}/> */}
             <MobileMenu menuItems={menuItems} />

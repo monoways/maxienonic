@@ -1,4 +1,7 @@
 import react, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 import styles from './temaMenuMobile.module.css';
 
@@ -16,7 +19,10 @@ export default (props) => {
     return (
         <div className={styles.temaMenuContainer}>
             <div onClick={handleClick} className={styles.dropdwonContainer}>
-                <h2 className={styles.dropdownBtn}>{activeMenuItem.title}</h2>
+                <h2 className={styles.dropdownBtn}>
+                    {`${activeMenuItem.title} `}
+                    <FontAwesomeIcon icon={temaMenuOpen ? faArrowDown : faArrowRight} className={styles.arrow} />
+                </h2>
                 {temaMenuOpen && (
                 <div className={styles.dropdown}>
                     {props.menuItems.map((item, index) => {
