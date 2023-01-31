@@ -17,7 +17,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 .sectionRight {
     grid-area: sectionRight;
@@ -27,18 +28,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 .sectionTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: bold;
     color: #000000;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
 .sectionText {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: normal;
     color: #000000;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -48,4 +50,22 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+.sectionTextContainer {
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* under 768px screens should display the two grid sections under eachother instead of next to each other,
+left and right section should take 100% of the vw */
+@media screen and (max-width: 768px) {
+    .sectionContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "sectionLeft" "sectionRight";
+    }
 }
