@@ -43,7 +43,6 @@
     z-index: 10;
 }
 .heroImage {
-    /* scale image to container its in  */
     width: 80%;
     object-fit: cover;
     object-position: center;
@@ -55,7 +54,6 @@
 .heroTitle {
     font-size: 2.5rem;
     font-weight: 700;
-    /* color: #000000; */
     color: #212427;
     margin: 0 0 1rem 0;
     padding: 0 0 0 0;
@@ -63,7 +61,6 @@
 .heroText {
     font-size: 1.5rem;
     font-weight: 400;
-    /* color: #000000; */
     color: #212427;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -79,7 +76,6 @@
     margin: 1rem;
     padding: 0 0 0 0;
 }
-/* target a tags inside the .buttonContainer */
 .buttonContainer a {
     /* margin: 0.5rem; */
 }
@@ -111,5 +107,12 @@
     /* add a background effect to the container so the text is visible even when a dark image is shown behind it */
     .heroLeft {
         background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* for screens larger than 1700px, make the image width max 65% */
+@media screen and (min-width: 1700px) {
+    .heroImage {
+        width: 65%;
     }
 }

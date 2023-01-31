@@ -1,11 +1,17 @@
 import React from "react";
 import Regions from '@enonic/react-components/Regions';
 
+import styles from './container.module.css'
 
-export default (props) => (
-    <div class='testContainerLayout'>
-        <Regions {...props} />
-    </div>
+
+export default function container(props) {
+    return (
+        <div class={styles.containerLayout}>
+            <Regions {...props} />
+        </div>
+    )
+}
+
     // <div class="row layout" style="margin: auto;width:80%;">
     //     <div data-th-each="region, iterStat : ${regions}" data-th-remove="tag">
     //         <div data-th-attr="data-portal-region=${region.name}" data-th-class="${region.columnClass}" style=" display: flex;
@@ -17,4 +23,3 @@ export default (props) => (
     //         </div>
     //     </div>
     // </div>
-);

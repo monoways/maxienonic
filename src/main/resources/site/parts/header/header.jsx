@@ -16,7 +16,8 @@ export default (props) => {
     const tema = brukere && brukere.children && brukere.children.find(item => item.title === 'Tema');
 
     const menuItemsArray = [];
-    // this loops through three levels of menu items and pushes them to the menuItemsArray to get a flat array of all menu items, it also adds a layer property to each item
+    // this loops through three levels of menu items and pushes them to the menuItemsArray to get a flat array of all menu items, 
+    // it also adds a layer property to each item
     menuItems.forEach((item) => {
         item.layer = 0;
         menuItemsArray.push(item);
