@@ -1,0 +1,95 @@
+plugins {
+    id 'com.enonic.defaults' version '2.0.1'
+    id 'com.enonic.xp.app' version '3.2.0'
+    id "com.github.node-gradle.node" version "3.4.0"
+    id 'react4xp'
+}
+
+repositories {
+    xp.enonicRepo('dev')
+    mavenCentral()
+}
+
+node {
+    download = true
+    version = '16.0.0'
+}
+
+app {
+    name = "${appName}"
+    displayName = "${appDisplayName}"
+    vendorName = "${vendorName}"
+    vendorUrl = "${vendorUrl}"
+    systemVersion = "${xpVersion}"
+}
+
+dependencies {
+    implementation "com.enonic.xp:core-api:${xpVersion}"
+    implementation "com.enonic.xp:portal-api:${xpVersion}"
+    include "com.enonic.xp:lib-content:${xpVersion}"
+    include "com.enonic.xp:lib-portal:${xpVersion}"
+    //include "com.enonic.xp:lib-auth:${xpVersion}"
+    //include "com.enonic.xp:lib-context:${xpVersion}"
+    //include "com.enonic.xp:lib-i18n:${xpVersion}"
+    //include "com.enonic.xp:lib-io:${xpVersion}"
+    //include "com.enonic.xp:lib-mail:${xpVersion}"
+    //include "com.enonic.xp:lib-repo:${xpVersion}"
+    //include "com.enonic.xp:lib-websocket:${xpVersion}"
+    include "com.enonic.lib:lib-thymeleaf:2.0.1"
+    include "com.enonic.lib:lib-guillotine:5.5.0"
+
+    include "com.enonic.lib:lib-react4xp:3.3.0"
+}
+
+sourceSets {
+  main {
+    resources {
+      ['.gitkeep','*.es6','*.jsx','*.scss','*.tsx'].each { ext ->
+        exclude "**/$ext"
+      }
+    }
+  }
+}
+
+processResources {
+  // Files that are simply copied by gradle: png svg xml
+  exclude '**/.gitkeep'
+  exclude '**/*.es6' // non-react ones handled by task compileXP
+  exclude '**/*.jsx' // handled by @enonic/react4xp gradle files
+  exclude '**/*.tsx' // handled by @enonic/react4xp gradle files
+  exclude '**/*.scss' // handled by @enonic/react4xp gradle files
+}
+
+tasks.withType(Copy) {
+  includeEmptyDirs = false
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// This task takes care of XP non-react (and therefore non-react4xp) es6 files under src/main/resources/site.
+// This is independent of react4xp, so you can replace this with your own build steps if you want.
+// IMPORTANT: Note how this task ignores .jsx files under src/main/resources. If you use your own logic to compile non-react
+// XP files (i.e. replace this task or add more to it), you should usually make it ignore .jsx files the same way, to
+// ensure that those are handled only by the react4xp build (node_modules/@enonic/react4xp/react4xp.gradle, aka. react4xpGradlePath)
+// and not compiled twice.
+task compileXP(type: NodeTask) {
+    group 'enonic xp'
+    description 'Babel-compile Enonic XP ES6 source files (important: ignoring JSX components since they are left to react4xp)'
+
+    script = file('node_modules/@babel/cli/bin/babel.js')
+    args = ["src/main/resources", "--out-dir", "build/resources/main", "--ignore", "**/*.jsx"]      // <-- Ignoring JSX in the XP structure is important!
+
+    inputs.files fileTree(dir: 'src/main/resources', exclude: [
+      '**/.gitkeep',
+      '**/*.jsx',
+      '**/*.html',
+      '**/*.png',
+      '**/*.scss',
+      '**/*.svg',
+      '**/*.tsx',
+      '**/*.xml'
+    ])
+    outputs.dir 'build/resources/main'
+}
+compileXP.dependsOn += npmInstall
+jar.dependsOn += 'compileXP'
