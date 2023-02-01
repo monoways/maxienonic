@@ -40,6 +40,8 @@ module.exports = {
   //  with entryDirs or /site/.
   //
   //chunkDirs: [''],
+  chunkDirs: ['components', 'shared'],
+
 
 
   // entryDirs are additional folder names where webpack will look for entry
