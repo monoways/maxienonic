@@ -1,0 +1,27 @@
+/* button styles for primary and secondary buttons */
+.primary {
+  background-color: #581B5E;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.secondary {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

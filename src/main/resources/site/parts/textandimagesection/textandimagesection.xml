@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>Text and image</display-name>
+    <description>Component to show some text and an image in a section</description>
+    <form>
+        <input name="title" type="TextLine">
+            <label>Title</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>My title</default>
+        </input>
+        <input name="text" type="TextLine">
+            <label>text</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Lorem ipsum dolor sit amnet</default>
+        </input>
+        <input name="image" type="ImageSelector">
+            <label>Image</label>
+            <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input name="imagePosition" type="RadioButton">
+            <label>Image position</label>
+            <occurrences minimum="1" maximum="1"/> 
+            <config>
+                <option value="left" i18n="option_one.label">left</option>
+                <option value="right" i18n="option_two.label">right</option>
+            </config>
+            <default>right</default>
+        </input>
+        <input name="button" type="RadioButton">
+            <label>Buttons under the text?</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </config>
+            <default>false</default>
+        </input>
+        <input name="buttonText" type="TextLine">
+            <label>Button 1 text</label>
+            <occurrences minimum="0" maximum="1"/>
+            <default>Button text</default>
+        </input>
+        <input name="buttonLink" type="TextLine">
+            <label>Button 1 link</label>
+            <occurrences minimum="0" maximum="1"/>
+            <default>https://enonic.com</default>
+        </input>
+        <input name="buttonText2" type="TextLine">
+            <label>Button 2 text</label>
+            <occurrences minimum="0" maximum="1"/>
+            <default>Button text</default>
+        </input>
+        <input name="buttonLink2" type="TextLine">
+            <label>Button 2 link</label>
+            <occurrences minimum="0" maximum="1"/>
+            <default>https://enonic.com</default>
+        </input>
+    </form>
+</part>

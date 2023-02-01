@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>Bilde med tekstboks</display-name>
+    <description>Component to show some an image with a textbox in it</description>
+    <form>
+        <input name="title" type="TextLine">
+            <label>Title</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Image with textbox</default>
+        </input>
+        <input name="text" type="TextLine">
+            <label>text</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Lorem ipsum dolor sit amnet, and lots of other text</default>
+        </input>
+        <input name="image" type="ImageSelector">
+            <label>Image</label>
+            <occurrences minimum="1" maximum="1"/>
+        </input>
+    </form>
+</part>

@@ -1,0 +1,7 @@
+<layout>
+    <display-name>Poster gallery layout</display-name>
+    <form/>
+    <regions>
+        <region name="main" />
+    </regions>
+</layout>

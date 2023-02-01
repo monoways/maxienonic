@@ -1,0 +1,9 @@
+<page>
+  <display-name>Blogg side</display-name>
+  <description>Blogg controller</description>
+  <form/>
+  <regions>
+    <region name="header"/>
+    <region name="main"/>
+  </regions>
+</page>
