@@ -24,6 +24,10 @@
     text-decoration: none;
     color: #fff;
 }
+.bannerMenuItem:hover {
+    text-decoration: underline;
+    color: #cecece;
+}
 .bannerMenuItemActive {
     margin: 0 1rem;
     font-size: large;

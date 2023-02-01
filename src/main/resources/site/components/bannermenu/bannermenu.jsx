@@ -31,6 +31,7 @@ export default (props) => {
         tema: menuItemsArray.find(item => item.title === 'Tema'),
         om: menuItemsArray.find(item => item.title === 'Om SELFI'),
         materiale: menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
+        hjelpogstotte: menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
     }
 
     const activeMenuItem = menuItemsArray.find(item => item.isActive);

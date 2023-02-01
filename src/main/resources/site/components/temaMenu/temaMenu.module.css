@@ -7,6 +7,9 @@
     color: #253777;
     text-decoration: none;
 }
+.temaItem:hover {
+    text-decoration: underline;
+}
 .temaItemActive {
     display: flex;
     justify-content: center;

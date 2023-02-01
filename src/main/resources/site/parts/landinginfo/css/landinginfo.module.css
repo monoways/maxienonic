@@ -113,6 +113,6 @@
 /* for screens larger than 1700px, make the image width max 65% */
 @media screen and (min-width: 1700px) {
     .heroImage {
-        width: 65%;
+        width: 60%;
     }
 }

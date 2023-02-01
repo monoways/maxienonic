@@ -10,6 +10,7 @@ export default (props) => {
             // produkter: props.menuItemsArray.find(item => item.title === 'Våre Produkter'),
             omOss: props.menuItemsArray.find(item => item.title === 'Om SELFI'),
             materiale: props.menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
+            hjelpogstotte: props.menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
         }
 
     return (
