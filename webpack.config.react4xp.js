@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //──────────────────────────────────────────────────────────────────────────────
 // Use this file to adjust the webpack config.
 //──────────────────────────────────────────────────────────────────────────────
