@@ -1,8 +1,13 @@
 /** Wraps Regions from https://www.npmjs.com/package/react4xp-regions */
 import React from 'react';
 //import {toStr} from '@enonic/js-utils/dist/cjs';
-import Regions from '@enonic/react-components/Regions';
+import BreadcrumbMenu from '../../components/breadcrumbMenu/breadcrumbMenu.jsx';
+import TemaMenu from '../../components/temaMenu/temaMenu.jsx';
+import BannerMenu from '../../components/bannermenu/bannermenu.jsx';
+import Footer from '../../components/footer/Footer.jsx';
 
+import './css/default.css';
+import Region from '@enonic/react-components/Region';
 
 /*function testNashornPolyfills() {
   console.debug('context', toStr(context)); // undefined
@@ -55,10 +60,57 @@ import Regions from '@enonic/react-components/Regions';
 
 
 export default (props) => {
+  const menuItems = props.menuItems.menuItems;
+  // console.log(JSON.stringify(menuItems), 'menuItems.hasChildren');
+  // console.log(JSON.stringify(props.content), 'props.content');
+  // console.log(JSON.stringify(props.breadcrumbItems), 'props.breadcrumItems');
   //testNashornPolyfills();
+
+  const menuItemsArray = [];
+  // this loops through three levels of menu items and pushes them to the menuItemsArray to get a flat array of all menu items, 
+  // it also adds a layer property to each item
+  menuItems.forEach((item) => {
+      item.layer = 0;
+      menuItemsArray.push(item);
+      if (item.hasChildren) {
+          item.children.forEach((child) => {
+              child.layer = 1;
+              child.father = item.title;
+              menuItemsArray.push(child);
+              if (child.hasChildren) {
+                  child.children.forEach((child2) => {
+                      child2.father = child.title;
+                      child2.layer = 2;
+                      menuItemsArray.push(child2);
+                  })
+              }
+          })
+      }
+  })
+
+  const onTemaPath = props.content._path.match(/\/selfi\/brukere\/tema/);
+  // console.log('onTemaPath', onTemaPath);
+
+  // find all menuitems that are children of the element in menuItems that has the title "Brukere"
+  const brukere = menuItems.find(item => item.title === 'Brukere');
+  // if brukere has children, find the one that has the title "Tema" and return its children
+  const tema = brukere && brukere.children && brukere.children.find(item => item.title === 'Tema');
+
   return (
-    <div className="default-page">
-        <Regions {...props} />
-    </div>
+      <div style={{backgroundColor: props.backgroundColor}} className="default-page">
+          {/* <header className='header'>
+            <img className="header-logo" src={Logo} alt="logo" />
+            <Menu menuItems={menuItems}/>
+            <Burgermenu menuItems={menuItems}/>
+          </header> */}
+          {/* <Header menuItems={menuItems} /> */}
+          <Region name='header' regionData={props.regionsData['header']} {...props} />
+          {/* <BannerMenu menuItems={menuItems} /> */}
+          {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
+          {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
+          <Region name='main'regionData={props.regionsData['main']} {...props} />
+          <Footer menuItems={menuItems} menuItemsArray={menuItemsArray} />
+      </div>
   );
 };
+// regionData={props.headerRegion}

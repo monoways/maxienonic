@@ -1,0 +1,26 @@
+.sectionContainer {
+    width: 90%;
+    margin: auto;
+    background-image: url('https://www.mooc.org/hubfs/psych-fields-jpg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    display: flex;
+    position: relative;
+ }
+
+.textBox {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 5;
+    left: 5;
+    /* width: 20rem; */
+    /* height: fit-content; */
+    /* min-width: 20rem; */
+    /* min-height: 10rem; */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: white;
+ }

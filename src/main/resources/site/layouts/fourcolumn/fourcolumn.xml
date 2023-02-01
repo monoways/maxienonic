@@ -1,0 +1,10 @@
+<layout>
+    <display-name>4-kolonne</display-name>
+    <form/>
+    <regions>
+        <region name="left" />
+        <region name="middleLeft" />
+        <region name="middleRight" />
+        <region name="right" />
+    </regions>
+</layout>

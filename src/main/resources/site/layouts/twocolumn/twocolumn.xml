@@ -1,0 +1,8 @@
+<layout>
+    <display-name>2-kolonne</display-name>
+    <form/>
+    <regions>
+        <region name="left" />
+        <region name="right" />
+    </regions>
+</layout>

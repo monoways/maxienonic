@@ -1,0 +1,14 @@
+.containerLayout {
+    max-width: 90%;
+    margin: auto; 
+}
+@media screen and (min-width: 900px) {
+    .containerLayout {
+        max-width: 70%;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .containerLayout {
+        max-width: 50%;
+    }
+}

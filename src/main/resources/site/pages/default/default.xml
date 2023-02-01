@@ -1,8 +1,15 @@
 <page>
   <display-name>Default page</display-name>
   <description>Default react-rendered page controller</description>
-  <form/>
+  <form>
+    <input name='backgroundColor' type='TextLine'>
+      <label>Background Color</label>
+      <occurrences minimum='1' maximum='1'/>
+      <default>#ffffff</default>
+    </input>
+  </form>
   <regions>
+    <region name="header"/>
     <region name="main"/>
   </regions>
 </page>

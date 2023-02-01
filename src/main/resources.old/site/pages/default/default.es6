@@ -7,44 +7,25 @@
 
 const portal = require('/lib/xp/portal');
 const React4xp = require('/lib/enonic/react4xp');
-const menu = require('/lib/menu');
 
 exports.get = function(request) {
     const content = portal.getContent();
-    const pageConfig = (content.page || {}).config || {};
     const entry = portal.getComponent();
 
-    let menuItems = menu.getMenuTree(3);
-    let breadcrumbItems = menu.getBreadcrumbMenu();
-    // const getMenuProps = () => ({
-    //     menuItems: menuLib.getMenuTree(3).menuItems || [], 
-    // });
-    // console.log("getMenuProps", getMenuProps(), 'dette er fra default.es6');
-    // console.log(menuLib.getMenuTree(3).menuItems, 'dette er fra default.es6');
 
-    const id = `react4xp_${content._id}`;                   
+    const id = `react4xp_${content._id}`;
 
     const props = {
         regionsData: content.page.regions,
-        // mainRegion: content.page.regions["main"],
-        // headerRegion: content.page.regions["header"],
-        names: ["header", "main"],
-        // tag: "main",
-        backgroundColor: pageConfig.backgroundColor,
-        menuItems: menuItems,
-        breadcrumbItems: breadcrumbItems,
-        content: content,
+        names: "main",
+        tag: "main",
     };
 
     const htmlBody = `
                 <html>
                     <head>
                         <meta charset="UTF-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                         <title>${content.displayName}</title>
-                        <base href="${portal.assetUrl({path: ''})}" />
-                        <link type="text/css" href="${portal.assetUrl({path: 'css/default.css'})}" />
-                        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css" />
                     </head>
                     <body class="xp-page">
                         <div id="${id}"></div>

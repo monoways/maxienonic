@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>Landing info</display-name>
+    <description>Hero content on the landing page</description>
+    <form>
+        <input name="title" type="TextLine">
+            <label>Title</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>My title</default>
+        </input>
+        <input name="text" type="TextLine">
+            <label>text</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Lorem ipsum dolor sit amnet</default>
+        </input>
+        <input name="image" type="ImageSelector">
+            <label>Image</label>
+            <occurrences minimum="1" maximum="1"/>
+        </input>
+    </form>
+</part>

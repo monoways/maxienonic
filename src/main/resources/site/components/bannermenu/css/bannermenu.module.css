@@ -1,0 +1,37 @@
+/* make a nav with a pruple backgroundd color that has 100vw width and the li elements in the same line, to the left with a little margin between each */
+.bannerNav {
+    background-color: hsl(295, 55%, 24%);
+    max-width: 100vw;
+    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: large;
+}
+/* this is the ul called bannerMenuItems */
+.bannerMenuItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/* these are the li with a tags inside that are the bannerMenuItems */
+.bannerMenuItem {
+    margin: 0 1rem;
+    font-size: large;
+    text-decoration: none;
+    color: #fff;
+}
+.bannerMenuItem:hover {
+    text-decoration: underline;
+    color: #cecece;
+}
+.bannerMenuItemActive {
+    margin: 0 1rem;
+    font-size: large;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}

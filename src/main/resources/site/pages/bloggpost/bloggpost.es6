@@ -1,26 +1,14 @@
-/** Simple page controller, as an example of how to render an XP page with Regions, using only server-side React.
- *
- *  NOTE:   Parts and layouts rendered with react4xp DO NOT need a page controller like this to work. Putting react4xp-
- *          rendered XP components inside regions in a thymeleaf-rendered page controller (or hardcoded, etc) is
- *          perfectly fine. This is just a demo of how to do it if you need to make the page controller in react4xp.
- */
-
 const portal = require('/lib/xp/portal');
 const React4xp = require('/lib/enonic/react4xp');
 const menu = require('/lib/menu');
 
 exports.get = function(request) {
     const content = portal.getContent();
-    const pageConfig = (content.page || {}).config || {};
+    // const pageConfig = (content.page || {}).config || {};
     const entry = portal.getComponent();
 
     let menuItems = menu.getMenuTree(3);
     let breadcrumbItems = menu.getBreadcrumbMenu();
-    // const getMenuProps = () => ({
-    //     menuItems: menuLib.getMenuTree(3).menuItems || [], 
-    // });
-    // console.log("getMenuProps", getMenuProps(), 'dette er fra default.es6');
-    // console.log(menuLib.getMenuTree(3).menuItems, 'dette er fra default.es6');
 
     const id = `react4xp_${content._id}`;                   
 
@@ -30,10 +18,20 @@ exports.get = function(request) {
         // headerRegion: content.page.regions["header"],
         names: ["header", "main"],
         // tag: "main",
-        backgroundColor: pageConfig.backgroundColor,
+        // backgroundColor: pageConfig.backgroundColor,
         menuItems: menuItems,
         breadcrumbItems: breadcrumbItems,
+        path: content._path,
         content: content,
+        blogContent: {
+            title: content.displayName,
+            preface: content.data.preface,
+            text: content.data.bodyText,
+            image: content.data.image ? portal.imageUrl({
+                id: content.data.image,
+                scale: 'width(500)'
+            }) : '',
+        },
     };
 
     const htmlBody = `
@@ -44,7 +42,6 @@ exports.get = function(request) {
                         <title>${content.displayName}</title>
                         <base href="${portal.assetUrl({path: ''})}" />
                         <link type="text/css" href="${portal.assetUrl({path: 'css/default.css'})}" />
-                        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css" />
                     </head>
                     <body class="xp-page">
                         <div id="${id}"></div>
