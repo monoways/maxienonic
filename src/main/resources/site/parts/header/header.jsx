@@ -6,6 +6,7 @@ import Logo from '../../../assets/images/logo.svg';
 
 export default (props) => {
     const menuItems = props.menuItems.menuItems;
+    console.log('menuItems', JSON.stringify(menuItems));
 
     const onTemaPath = props.content._path.match(/\/selfi\/brukere\/tema/);
     const homeLink = menuItems[0].url;
@@ -45,10 +46,10 @@ export default (props) => {
             </a>
             {/* <Menu menuItems={menuItems}/> */}
             {/* <Burgermenu menuItems={menuItems}/> */}
-            <MobileMenu menuItems={menuItems} />
+            {/* <MobileMenu menuItems={menuItems} /> */}
         </header>
-        <BannerMenu menuItems={menuItems} />
-        {onTemaPath && <MobileTemaMenu menuItems={tema.children} menuItemsArray={menuItemsArray} backgroundColor={props.backgroundColor} />}
+        {/* <BannerMenu menuItems={menuItems} /> */}
+        {/* {onTemaPath && <MobileTemaMenu menuItems={tema.children} menuItemsArray={menuItemsArray} backgroundColor={props.backgroundColor} />} */}
         </>
     )
 }
