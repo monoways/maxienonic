@@ -35,3 +35,10 @@
     color: #fff;
     border-bottom: 2px solid #fff;
 }
+
+/* on mobile make all the a tags display none */
+@media only screen and (max-width: 600px) {
+    .bannerMenuItem {
+        display: none;
+    }
+}
