@@ -10,6 +10,8 @@ export default (props) => {
     const onTemaPath = props.content._path.match(/\/selfi\/brukere\/tema/);
     const homeLink = menuItems[0].url;
 
+    console.log(JSON.stringify(menuItems), 'menuItems');
+
     // find all menuitems that are children of the element in menuItems that has the title "Brukere"
     const brukere = menuItems.find(item => item.title === 'Brukere');
     // if brukere has children, find the one that has the title "Tema" and return its children
