@@ -108,6 +108,7 @@ export default (props) => {
           {/* <BannerMenu menuItems={menuItems} /> */}
           {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
           {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
+          <h1>Dette er en test</h1>
           <Region name='main'regionData={props.regionsData['main']} {...props} />
           <Footer menuItems={menuItems} menuItemsArray={menuItemsArray} />
       </div>
