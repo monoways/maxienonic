@@ -5,10 +5,13 @@ const libs = {
   
   exports.get = (req) => {
     const component = libs.portal.getComponent();
+    // const content = libs.portal.getContent();
 
     const props = {
       regionsData: component.regions,
-      names: ['left', 'right']
+      // regionsData: content.page.regions,
+      names: ['left', 'right'],
+      maxWidth: parseInt(component.config.maxWidth, 10),
     };
   
     return libs.react4xp.render(

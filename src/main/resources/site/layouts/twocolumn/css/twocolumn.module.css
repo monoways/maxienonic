@@ -1,15 +1,14 @@
-.regionsContainer {
+/* .regionsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-    /* padding: 1.2rem 2rem 1.2rem 2rem; */
     width: 90%;
     margin: 2.5rem auto;
-}
-.rightRegion {
+} */
+/* .rightRegion {
     display: block;
     justify-content: center;
     margin: auto;
@@ -20,8 +19,8 @@
     justify-content: center;
     margin: auto;
     flex-basis: 50%;
-}
-
+} */
+/* 
 @media screen and (max-width: 600px) {
     .regionsContainer {
         flex-direction: column;
@@ -45,4 +44,4 @@
         max-width: 50%;
         margin: 2.5rem auto;
     }
-}
+} */

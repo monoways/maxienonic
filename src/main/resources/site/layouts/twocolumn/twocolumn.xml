@@ -1,6 +1,12 @@
 <layout>
     <display-name>2-kolonne</display-name>
-    <form/>
+    <form>
+        <input name="maxWidth" type="TextLine">
+            <label>Maks bredde i prosent</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>90</default>
+        </input>
+    </form>
     <regions>
         <region name="left" />
         <region name="right" />
