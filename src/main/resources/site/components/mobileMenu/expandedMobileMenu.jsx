@@ -8,7 +8,7 @@ export default (props) => {
             hjem: props.menuItemsArray.find(item => item.title === 'Hjem'),
             omOss: props.menuItemsArray.find(item => item.title === 'Om SELFI'),
             tema: props.menuItemsArray.find(item => item.title === 'Tema'),
-            materiale: props.menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
+            materiale: props.menuItemsArray.find(item => item.title === 'Tilgjengelig materiell'),
             hjelpogstotte: props.menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
         }
 

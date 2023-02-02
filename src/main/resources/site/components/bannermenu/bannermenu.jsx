@@ -30,7 +30,7 @@ export default (props) => {
         hjem: menuItemsArray.find(item => item.title === 'Hjem'),
         om: menuItemsArray.find(item => item.title === 'Om SELFI'),
         tema: menuItemsArray.find(item => item.title === 'Tema'),
-        materiale: menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
+        materiale: menuItemsArray.find(item => item.title === 'Tilgjengelig materiell'),
         hjelpogstotte: menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
     }
 
