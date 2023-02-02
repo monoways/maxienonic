@@ -28,8 +28,8 @@ export default (props) => {
 
     const menuItemsToRender = {
         hjem: menuItemsArray.find(item => item.title === 'Hjem'),
-        tema: menuItemsArray.find(item => item.title === 'Tema'),
         om: menuItemsArray.find(item => item.title === 'Om SELFI'),
+        tema: menuItemsArray.find(item => item.title === 'Tema'),
         materiale: menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
         hjelpogstotte: menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
     }

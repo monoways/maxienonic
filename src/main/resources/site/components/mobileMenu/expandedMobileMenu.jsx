@@ -6,9 +6,8 @@ export default (props) => {
     const menuItems =
         {
             hjem: props.menuItemsArray.find(item => item.title === 'Hjem'),
-            tema: props.menuItemsArray.find(item => item.title === 'Tema'),
-            // produkter: props.menuItemsArray.find(item => item.title === 'Våre Produkter'),
             omOss: props.menuItemsArray.find(item => item.title === 'Om SELFI'),
+            tema: props.menuItemsArray.find(item => item.title === 'Tema'),
             materiale: props.menuItemsArray.find(item => item.title === 'Tilgjengelig materiale'),
             hjelpogstotte: props.menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
         }
