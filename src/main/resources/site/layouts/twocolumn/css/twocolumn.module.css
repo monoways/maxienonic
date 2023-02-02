@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 2000px) {
     .regionsContainer {
-        width: 90%;
+        max-width: 70%;
         margin: 2.5rem auto;
     }
 }
