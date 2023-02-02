@@ -19,7 +19,7 @@ export default function Layout1({ regionsData, names, maxWidth }) {
 
   return (
     <>
-    <div className='regionsContainer'>
+    <div style={{maxWidth:`${maxWidth || 90}%`}} className='regionsContainer'>
       <Region regionData={regionsData['left']} name='left' addClass={classes.left} />
       <Region regionData={regionsData['right']} name='right' addClass={classes.right} />
       {/* <Regions {...{ regionsData, names, classes }} /> */}
@@ -33,7 +33,6 @@ export default function Layout1({ regionsData, names, maxWidth }) {
         justify-content: space-between;
         align-items: flex-start;
         align-content: flex-start;
-        max-width: ${maxWidth}%;
         margin: 2.5rem auto;
       }
       .rightRegion {
@@ -60,9 +59,6 @@ export default function Layout1({ regionsData, names, maxWidth }) {
         .rightRegion {
           width: 100%;
         }
-        @media screen and (min-width: 768px and max-width: 1024px) {
-          .regionsContainer {
-            max-width: ${maxWidth - 10}%;
       `}</style>
     </>
   )
