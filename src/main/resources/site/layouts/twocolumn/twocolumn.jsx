@@ -48,10 +48,10 @@ export default function Layout1({ regionsData, names, maxWidth }) {
         flex-basis: 50%;
       }
         
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         .regionsContainer {
           flex-direction: column;
-          max-width: 90%;
+          max-width: 90%!important;
         }
         .leftRegion {
           width: 100%;
