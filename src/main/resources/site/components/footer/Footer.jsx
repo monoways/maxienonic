@@ -33,7 +33,6 @@ export default (props) => {
                 <h2 className={styles.footerMenuHeader}>Her treffer du oss</h2>
                   <p>UNN Åsgård</p>
                   <p>Åsgårdvegen 40 </p>
-                  {/* email:too field */}
                   <a href="mailto: selfi@unn.no"><p>Epost: Selfi@unn.no</p></a>
               </div>
             </div>
