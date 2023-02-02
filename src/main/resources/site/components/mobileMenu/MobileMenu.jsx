@@ -11,7 +11,6 @@ export default (props) => {
     }
 
     const menuItemsArray = [];
-
     // this loops through three levels of menu items and pushes them to the menuItemsArray to get a flat array of all menu items, it also adds a layer property to each item
     props.menuItems.forEach((item) => {
         item.layer = 0;
