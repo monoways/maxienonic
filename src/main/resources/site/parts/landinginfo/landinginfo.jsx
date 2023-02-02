@@ -12,7 +12,7 @@ export default (props) => {
                 <p className={styles.heroText}>{props.text}</p>
                 <div className={styles.buttonContainer}>
                     <Button text='For bruker' link='/brukere/tema' buttonStyle='primary' />
-                    <Button text='Tilgjengelig materiale' link='/brukere/tilgjengelig-materiale' buttonStyle='secondary' />
+                    <Button text='For hjelpere' link='/hjelpere' buttonStyle='secondary' />
                 </div>
             </div>
             <div className={styles.heroRight}>
