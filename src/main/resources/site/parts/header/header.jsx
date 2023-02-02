@@ -44,7 +44,6 @@ export default (props) => {
                 <img className="header-logo" src={Logo} alt="logo and homelink"/>
             </a>
             {/* <Menu menuItems={menuItems}/> */}
-            {/* <Burgermenu menuItems={menuItems}/> */}
             <MobileMenu menuItems={menuItems} />
         </header>
         <BannerMenu menuItems={menuItems} />
