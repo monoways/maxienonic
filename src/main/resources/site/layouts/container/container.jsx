@@ -6,7 +6,7 @@ import styles from './container.module.css'
 
 export default function container(props) {
     return (
-        <div class={styles.containerLayout}>
+        <div style={{bacgroundColor:`${props.bacgroundColor}`}} class={styles.containerLayout}>
             <Regions {...props} />
         </div>
     )

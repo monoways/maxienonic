@@ -1,6 +1,7 @@
 .containerLayout {
     max-width: 90%;
-    margin: auto; 
+    margin: 1rem auto; 
+    padding: 1rem;
 }
 @media screen and (min-width: 900px) {
     .containerLayout {

@@ -2,6 +2,12 @@
 <layout>
   <display-name>container</display-name>
   <form>
+    <!-- input for background color -->
+    <input name='backgroundColor' type='TextLine'>
+      <label>Background Color</label>
+      <occurrences minimum='1' maximum='1'/>
+      <default>#ffffff</default>
+    </input>
   </form>
   <regions>
     <region name="main"/>    

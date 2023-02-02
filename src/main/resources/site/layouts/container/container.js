@@ -8,6 +8,7 @@ exports.get = (req) => {
 
   const props = {
     regionsData: component.regions,
+    backgroundColor: component.config.backgroundColor,
   };
 
   return libs.react4xp.render(
