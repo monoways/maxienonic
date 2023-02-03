@@ -55,9 +55,9 @@ export default (props) => {
                             )
                         }
                 })}
-                <div className={`dropdown`}>
-                    <p style={{color:'white'}} className={`${styles.bannerMenuItem} dropdownbtn menu-item`}>Hjelp og støtte</p>
-                    <div className='dropdownContent'>
+                <div className={styles.dropdown}>
+                    <p style={{color:'white'}} className={`${styles.bannerMenuItem} ${styles.dropdownbtn} ${styles.menuItem}`}>Hjelp og støtte</p>
+                    <div className={styles.dropdownContent}>
                         {Object.keys(dropDownMenuItems).map((item, index) => {
                                 return (
                                     <a key={index} className={dropDownMenuItems[item].title === activeMenuItem.title ? styles.bannerMenuItemActive : styles.bannerMenuItem} href={dropDownMenuItems[item].url}>
