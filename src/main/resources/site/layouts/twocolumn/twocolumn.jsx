@@ -9,7 +9,7 @@ import Region from '@enonic/react-components/Region';
 import Regions from '@enonic/react-components/Regions';
 
 
-export default function Layout1({ regionsData, names, maxWidth }) {
+export default function Layout1(props) {
   const classes = {
     // left: 'leftRegion',
     // right: 'rightRegion',
@@ -17,12 +17,20 @@ export default function Layout1({ regionsData, names, maxWidth }) {
     right: 'rightRegion', //styles.rightRegion,
   }
 
+  if (props.border) {
+    classes.left += ' twoColBorder';
+    // classes.right += ' twoColBorder';
+  }
+
   return (
     <>
-    <div style={{maxWidth:`${maxWidth || 90}%`}} className='regionsContainer'>
-      <Region regionData={regionsData['left']} name='left' addClass={classes.left} />
-      <Region regionData={regionsData['right']} name='right' addClass={classes.right} />
-      {/* <Regions {...{ regionsData, names, classes }} /> */}
+    <div style={{maxWidth:`${props.maxWidth || 90}%`}} className='regionsContainer'>
+      <div className='layoutContainer' style={{backgroundColor:`${props.leftBackgroundColor}`}}>
+        <Region regionData={props.regionsData['left']} name='left' addClass={classes.left} />
+      </div>
+      <div className='layoutContainer' style={{backgroundColor:`${props.rightBackgroundColor}`, }}>
+        <Region regionData={props.regionsData['right']} name='right' addClass={classes.right} />
+      </div>
     </div>
 
     <style jsx>{`
@@ -35,13 +43,7 @@ export default function Layout1({ regionsData, names, maxWidth }) {
         align-content: flex-start;
         margin: 2.5rem auto;
       }
-      .rightRegion {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        flex-basis: 50%;
-      }
-      .leftRegion {
+      .layoutContainer {
         display: flex;
         justify-content: center;
         margin: auto;

@@ -12,6 +12,9 @@ const libs = {
       // regionsData: content.page.regions,
       names: ['left', 'right'],
       maxWidth: parseInt(component.config.maxWidth, 10),
+      border: component.config.border,
+      leftBackgroundColor: component.config.leftBackgroundColor,
+      rightBackgroundColor: component.config.rightBackgroundColor
     };
   
     return libs.react4xp.render(

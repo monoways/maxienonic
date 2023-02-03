@@ -6,6 +6,21 @@
             <occurrences minimum="1" maximum="1"/>
             <default>90</default>
         </input>
+        <input name="border" type="CheckBox">
+            <label>Skal det være en border?</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>false</default>
+        </input>
+        <input name="leftBackgroundColor" type="TextLine">
+            <label>Bakgrunnsfarge venstre kolonne</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default></default>
+        </input>
+        <input name="rightBackgroundColor" type="TextLine">
+            <label>Bakgrunnsfarge høyre kolonne</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default></default>
+        </input>
     </form>
     <regions>
         <region name="left" />
