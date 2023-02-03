@@ -9,7 +9,9 @@ export default (props) => {
             omOss: props.menuItemsArray.find(item => item.title === 'Om SELFI'),
             tema: props.menuItemsArray.find(item => item.title === 'Tema'),
             materiale: props.menuItemsArray.find(item => item.title === 'Tilgjengelig materiell'),
-            hjelpogstotte: props.menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
+            // hjelpogstotte: props.menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
+            undersoning: props.menuItemsArray.find(item => item.title === 'Under soning'),
+            etterloslatelse: props.menuItemsArray.find(item => item.title === 'Etter løslatelse'),
         }
 
     return (

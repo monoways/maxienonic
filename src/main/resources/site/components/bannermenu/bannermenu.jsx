@@ -31,7 +31,11 @@ export default (props) => {
         om: menuItemsArray.find(item => item.title === 'Om SELFI'),
         tema: menuItemsArray.find(item => item.title === 'Tema'),
         materiale: menuItemsArray.find(item => item.title === 'Tilgjengelig materiell'),
-        hjelpogstotte: menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
+        // hjelpogstotte: menuItemsArray.find(item => item.title === 'Hjelp og støtte'),
+    }
+    const dropDownMenuItems = {
+        undersoning: menuItemsArray.find(item => item.title === 'Under soning'),
+        etterloslatelse: menuItemsArray.find(item => item.title === 'Etter løslatelse'),
     }
 
     const activeMenuItem = menuItemsArray.find(item => item.isActive);
@@ -51,6 +55,16 @@ export default (props) => {
                             )
                         }
                 })}
+                <div className='dropdown'>
+                    <p style={{color:'white'}} className='dropdownbtn menu-item'>Hjelp og støtte</p>
+                    <div className='dropdownContent'>
+                        {Object.keys(dropDownMenuItems).map((item, index) => {
+                            return (
+                                <a key={index} href={dropDownMenuItems[item].url}>{dropDownMenuItems[item].title}</a>
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
         </nav>
     )
