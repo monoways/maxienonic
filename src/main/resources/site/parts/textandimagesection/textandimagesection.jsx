@@ -82,9 +82,9 @@ export default (props) => {
                     <h1 className={styles.sectionTitle}>{props.title}</h1>
                     <p className={styles.sectionText}>{props.text}</p>
                     {props.button === 'true' ? (
-                        <div>
-                            <a href={props.buttonLink}>{props.buttonText}</a>
-                            <a href={props.buttonLink2}>{props.buttonText2}</a>
+                        <div className={styles.linkContainer}>
+                            <a className={styles.link} href={props.buttonLink}>{props.buttonText}</a>
+                            <a className={styles.link} href={props.buttonLink2}>{props.buttonText2}</a>
                         </div> ) : ( <></> )}
                 </div>
             </div>

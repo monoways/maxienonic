@@ -60,6 +60,22 @@
     justify-content: center;
     align-items: center;
 }
+.linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 0 0 0 0;
+}
+.link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-decoration: none;
+}
 
 /* under 768px screens should display the two grid sections under eachother instead of next to each other,
 left and right section should take 100% of the vw */
