@@ -16,11 +16,6 @@ h2 {
     color: #fff;
     height: 100%;
 }
-/* styling for border for twocolumn */
-.twoColBorder {
-  border: 0px solid #000000;
-  outline: 2px solid #000000;
-}
 
 /* headerstyling */
 .header {

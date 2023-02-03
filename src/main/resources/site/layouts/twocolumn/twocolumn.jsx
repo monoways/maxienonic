@@ -17,15 +17,10 @@ export default function Layout1(props) {
     right: 'rightRegion', //styles.rightRegion,
   }
 
-  if (props.border) {
-    classes.left += ' twoColBorder';
-    // classes.right += ' twoColBorder';
-  }
-
   return (
     <>
     <div style={{maxWidth:`${props.maxWidth || 90}%`}} className='regionsContainer'>
-      <div className='layoutContainer' style={{backgroundColor:`${props.leftBackgroundColor}`}}>
+      <div className={`layoutContainer ${props.border ? 'twoColBorder' : ''}`} style={{backgroundColor:`${props.leftBackgroundColor}`}}>
         <Region regionData={props.regionsData['left']} name='left' addClass={classes.left} />
       </div>
       <div className='layoutContainer' style={{backgroundColor:`${props.rightBackgroundColor}`, }}>
@@ -48,6 +43,10 @@ export default function Layout1(props) {
         justify-content: center;
         margin: auto;
         flex-basis: 50%;
+      }
+      .twoColBorder {
+        border: 0px solid #000000;
+        outline: 2px solid #000000;
       }
         
       @media screen and (max-width: 900px) {
