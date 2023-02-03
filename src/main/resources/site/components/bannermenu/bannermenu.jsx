@@ -55,13 +55,15 @@ export default (props) => {
                             )
                         }
                 })}
-                <div className='dropdown'>
+                <div className={`dropdown`}>
                     <p style={{color:'white'}} className='dropdownbtn menu-item'>Hjelp og støtte</p>
                     <div className='dropdownContent'>
                         {Object.keys(dropDownMenuItems).map((item, index) => {
-                            return (
-                                <a key={index} href={dropDownMenuItems[item].url}>{dropDownMenuItems[item].title}</a>
-                            )
+                                return (
+                                    <a key={index} className={dropDownMenuItems[item].title === activeMenuItem.title ? styles.bannerMenuItemActive : styles.bannerMenuItem} href={dropDownMenuItems[item].url}>
+                                        {dropDownMenuItems[item].title}
+                                    </a>
+                                )
                         })}
                     </div>
                 </div>
