@@ -10,6 +10,8 @@ export default (props) => {
 
     return (
        <>
+       <h1>{props.title}</h1>
+       <p>{props.text}</p>
         <div style={{padding:'56.25% 0 0 0',position:'relative'}}>
             <iframe src={videoUrl} 
                     frameborder="0" 
