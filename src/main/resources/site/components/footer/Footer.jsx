@@ -22,7 +22,7 @@ export default (props) => {
               </div>
               <div className={styles.footerSection}>
               <div className={styles.footerMenu}>
-                <h2 className={styles.footerMenuHeader}>Kort om SELFI</h2>
+                {/* <h2 className={styles.footerMenuHeader}>Kort om SELFI</h2> */}
                 <a className={styles.menuItem} href={menuItems.omoss.url}>{menuItems.omoss.title}</a>
                 <a className={styles.menuItem} href={menuItems.samarbeidspartnere.url}>{menuItems.samarbeidspartnere.title}</a>
                 <a className={styles.menuItem} href={menuItems.finansiering.url}>{menuItems.finansiering.title}</a>
