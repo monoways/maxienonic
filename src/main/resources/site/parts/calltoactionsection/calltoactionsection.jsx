@@ -44,7 +44,7 @@ export default (props) => {
             </div>
             <div className={styles.sectionRight}>
                 {/* <FontAwesomeIcon icon={faArrowRight} className={styles.arrow} onClick={() => handleRedirect(linkItemUrl)} /> */}
-                <a href={linkItemUrl}>
+                <a className={styles.linkWrap} href={linkItemUrl}>
                     <FontAwesomeIcon icon={faArrowRight} className={styles.arrow} />
                 </a>
             </div>

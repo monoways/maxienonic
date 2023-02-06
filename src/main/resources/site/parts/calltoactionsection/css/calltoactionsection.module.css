@@ -63,6 +63,15 @@
     height: 48px;
     cursor: pointer;
 }
+.linkWrap {
+    color:black;
+}
+.linkWrap:hover {
+    color: #495454;
+}
+.linkWrap:visited {
+    color: #000000;
+}
 
 /* on desktop, make the sectionLeft have a margin-left of 10rem */
 @media screen and (min-width: 769px) {
