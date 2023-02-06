@@ -33,7 +33,7 @@ export default (props) => {
                 <h2 className={styles.footerMenuHeader}>Her treffer du oss</h2>
                   <p className={styles.menuItem}>UNN Åsgård</p>
                   <p className={styles.menuItem}>Åsgårdvegen 40 </p>
-                  <a className={styles.menuItem} href="mailto: selfi@unn.no"><p className={styles.menuItem}>Epost: Selfi@unn.no</p></a>
+                  <a href="mailto: selfi@unn.no"><p className={styles.menuItem}>Epost: Selfi@unn.no</p></a>
               </div>
             </div>
         </footer>
