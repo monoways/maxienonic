@@ -10,7 +10,7 @@ repositories {
     xp.enonicRepo('dev')
     mavenCentral()
     maven {
-        url 'http://repo.enonic.com/public'
+        url 'https://repo.enonic.com/public'
     }
 }
 
