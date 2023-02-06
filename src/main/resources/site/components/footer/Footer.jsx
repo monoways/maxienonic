@@ -22,7 +22,7 @@ export default (props) => {
               </div>
               <div className={styles.footerSection}>
               <div className={styles.footerMenu}>
-                {/* <h2 className={styles.footerMenuHeader}>Kort om SELFI</h2> */}
+                <h2 className={styles.footerMenuHeader}>Informasjon</h2>
                 <a className={styles.menuItem} href={menuItems.omoss.url}>{menuItems.omoss.title}</a>
                 <a className={styles.menuItem} href={menuItems.samarbeidspartnere.url}>{menuItems.samarbeidspartnere.title}</a>
                 <a className={styles.menuItem} href={menuItems.finansiering.url}>{menuItems.finansiering.title}</a>
@@ -31,9 +31,9 @@ export default (props) => {
               <div className={styles.footerSection}>
               <div className={styles.footerMenu}>
                 <h2 className={styles.footerMenuHeader}>Her treffer du oss</h2>
-                  <p>UNN Åsgård</p>
-                  <p>Åsgårdvegen 40 </p>
-                  <a href="mailto: selfi@unn.no"><p>Epost: Selfi@unn.no</p></a>
+                  <p className={styles.menuItem}>UNN Åsgård</p>
+                  <p className={styles.menuItem}>Åsgårdvegen 40 </p>
+                  <a className={styles.menuItem} href="mailto: selfi@unn.no"><p>Epost: Selfi@unn.no</p></a>
               </div>
             </div>
         </footer>
