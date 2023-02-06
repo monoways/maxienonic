@@ -3,6 +3,7 @@ plugins {
     id 'com.enonic.xp.app' version '3.2.0'
     id "com.github.node-gradle.node" version "3.5.0"
     id 'react4xp'
+    id 'com.enonic.lib:lib-urlredirect' version '3.0.0'
 }
 
 repositories {
