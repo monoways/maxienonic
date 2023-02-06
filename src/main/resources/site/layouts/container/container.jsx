@@ -6,20 +6,8 @@ import styles from './container.module.css'
 
 export default function container(props) {
     return (
-        <div style={{backgroundColor:`${props.backgroundColor}`}} class={styles.containerLayout}>
+        <div style={{backgroundColor:`${props.backgroundColor}`, maxWidth:props.maxWidth}} class={styles.containerLayout}>
             <Regions {...props} />
         </div>
     )
 }
-
-    // <div class="row layout" style="margin: auto;width:80%;">
-    //     <div data-th-each="region, iterStat : ${regions}" data-th-remove="tag">
-    //         <div data-th-attr="data-portal-region=${region.name}" data-th-class="${region.columnClass}" style=" display: flex;
-    //         align-items: center;
-    //         justify-content: center;">
-    //             <div data-th-each="component : ${region.components}" data-th-remove="tag">
-    //                 <div data-portal-component="${component.path}" data-th-remove="tag" />
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>

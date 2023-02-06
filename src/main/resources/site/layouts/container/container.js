@@ -9,6 +9,7 @@ exports.get = (req) => {
   const props = {
     regionsData: component.regions,
     backgroundColor: component.config.backgroundColor,
+    maxWidth: `${parseInt(component.config.maxWidth, 10)}%`,
   };
 
   return libs.react4xp.render(
