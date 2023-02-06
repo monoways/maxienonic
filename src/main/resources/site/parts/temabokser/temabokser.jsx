@@ -55,7 +55,7 @@ export default (props) => {
                     <h1 className={styles.textTitle}>{props.title}</h1>
                 </div>
                 <div className={styles.textRight}>
-                    <p className={styles.descriptionText}>{props.text}</p>
+                    {/* <p className={styles.descriptionText}>{props.text}</p> */}
                 </div>
             </div>
             <div className={styles.temaBokser}>
