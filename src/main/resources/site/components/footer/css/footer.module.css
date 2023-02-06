@@ -7,6 +7,7 @@
     border-top: 1px solid #e5e5e5;
 }
 .footerSection {
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
