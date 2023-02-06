@@ -18,11 +18,16 @@
             <occurrences minimum="1" maximum="1"/>
             <config></config>
         </input>
-        <!-- file upload for a pdf -->
         <input name="pdf" type="AttachmentUploader">
             <label>PDF</label>
             <occurrences minimum="1" maximum="1"/>
             <config></config>
+        </input>
+        <!-- have download button or not -->
+        <input name="download" type="CheckBox">
+            <label>Download</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>true</default>
         </input>
     </form>
 </part>

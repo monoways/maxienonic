@@ -4,10 +4,6 @@ import Button from '../../components/Button';
 
 export default (props) => {
 
-    // harcoded image src for now
-    // props.image = 'https://i.imgur.com/IP9eqYE.png';
-
-    // hardcoded poster 
     const poster = (
         <div className={styles.posterContainer}>
             <div className={styles.posterImageContainer}>
@@ -16,7 +12,7 @@ export default (props) => {
             <div className={styles.posterTextContainer}>
                 <h2 className={styles.posterTitle}>{props.title}</h2>
                 <p className={styles.posterText}>{props.text}</p>
-                <a className={styles.downloadLink} href={props.pdf} download>Last ned</a>
+                {props.download ? <a className={styles.downloadLink} href={props.pdf} download>Last ned</a> : null}
             </div>
         </div>
     )

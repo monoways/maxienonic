@@ -16,6 +16,7 @@ exports.get = function(request) {
             id: component.config.image,
             scale: 'width(500)'
         }) : '',
+        download: component.config.download,
     };
 
     return React4xp.render(
