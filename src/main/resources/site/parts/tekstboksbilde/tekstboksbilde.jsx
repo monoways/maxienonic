@@ -5,8 +5,7 @@ export default (props) => {
 
     const styles = {
         sectionContainer: {
-            width: "90%",
-            margin: "auto",
+            width: "100%",
             backgroundImage: `url('${props.image}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -14,7 +13,8 @@ export default (props) => {
             height: "50vh",
             display: "flex",
             position: "relative",
-            margin: "2.5rem auto",
+            // margin: "2.5rem auto",
+            margin: "0 auto",
         },
         textBox: {
             backgroundColor: "rgba(0, 0, 0, 0.5)",
