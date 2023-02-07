@@ -10,7 +10,6 @@ export default (props) => {
                 <img className={styles.logoImage} src={props.logo} alt="poster image" />
             </div>
             <div className={styles.logoTextContainer}>
-                <h2 className={styles.logoTitle}>{props.title}</h2>
                 <p className={styles.logoText}>{props.text}</p>
                 {props.visLink ? <a className={styles.link} href={props.link}>{props.title}</a> : null}
             </div>
