@@ -9,7 +9,7 @@ exports.get = function(request) {
         title: component.config.title,
         text: component.config.text, 
         link: component.config.link,
-        visLink: component.config.download,
+        visLink: component.config.visLink,
         logo: component.config.logo ? portal.imageUrl({
             id: component.config.logo,
             scale: 'width(220)'
