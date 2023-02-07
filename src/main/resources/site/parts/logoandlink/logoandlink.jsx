@@ -7,7 +7,7 @@ export default (props) => {
     const logoandlink = (
         <div className={styles.logoContainer}>
             <div className={styles.logoImageContainer}>
-                <img className={styles.logoImage} src={props.image} alt="poster image" />
+                <img className={styles.logoImage} src={props.logo} alt="poster image" />
             </div>
             <div className={styles.logoTextContainer}>
                 <h2 className={styles.logoTitle}>{props.title}</h2>
