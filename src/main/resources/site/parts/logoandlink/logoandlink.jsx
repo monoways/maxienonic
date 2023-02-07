@@ -1,5 +1,5 @@
 import react from "react";
-import styles from './css/buttonandlink.module.css';
+import styles from './css/logoandlink.module.css';
 import Button from '../../components/Button';
 
 export default (props) => {
