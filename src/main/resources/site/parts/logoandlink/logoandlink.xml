@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>Logo and link</display-name>
+    <description>Visning av samarbeidspartnere for eksempel</description>
+    <form>
+        <input name="title" type="TextLine">
+            <label>Title</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>My title</default>
+        </input>
+        <input name="text" type="TextLine">
+            <label>text</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>Lorem ipsum dolor sit amnet</default>
+        </input>
+        <input name="logo" type="ImageSelector">
+            <label>logo</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config></config>
+        </input>
+        <!-- link to their website -->
+        <input name="link" type="TextLine">
+            <label>link</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>https://www.google.com</default>
+        </input>
+        <!-- have link tag or not -->
+        <input name="visLink" type="CheckBox">
+            <label>Visible link</label>
+            <occurrences minimum="1" maximum="1"/>
+            <default>true</default>
+        </input>
+    </form>
+</part>
