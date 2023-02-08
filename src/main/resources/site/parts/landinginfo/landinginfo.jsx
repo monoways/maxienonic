@@ -11,7 +11,7 @@ export default (props) => {
                 <h1 className={styles.heroTitle}>{props.title}</h1>
                 <p className={styles.heroText}>{props.text}</p>
                 <div className={styles.buttonContainer}>
-                    <Button text='For bruker' link='/brukere/tema' buttonStyle='primary' />
+                    <Button text='Tilgjengelig materiell' link='/brukere/tilgjengelig-materiell' buttonStyle='primary' />
                     <Button text='For hjelpere' link='/hjelpere' buttonStyle='secondary' />
                 </div>
             </div>
