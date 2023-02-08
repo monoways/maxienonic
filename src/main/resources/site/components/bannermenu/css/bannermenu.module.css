@@ -19,7 +19,7 @@
 }
 /* these are the li with a tags inside that are the bannerMenuItems */
 .bannerMenuItem {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     font-size: large;
     text-decoration: none;
     color: #fff;
@@ -29,7 +29,7 @@
     color: #cecece;
 }
 .bannerMenuItemActive {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     font-size: large;
     text-decoration: none;
     color: #fff;
@@ -38,7 +38,7 @@
 
 /* for the dropdown */
 .menuItem {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     font-size: large;
     text-decoration: none;
     color: #000;
