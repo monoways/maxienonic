@@ -69,8 +69,8 @@ export default (props) => {
                     <p className={styles.sectionText}>{props.text}</p>
                     {props.button === 'true' ? (
                         <div>
-                            <a href={props.buttonLink}>{props.buttonText}</a>
-                            <a href={props.buttonLink2}>{props.buttonText2}</a>
+                            <a target='_blank' href={props.buttonLink}>{props.buttonText}</a>
+                            <a target='_blank' href={props.buttonLink2}>{props.buttonText2}</a>
                         </div> ) : ( <></> )}
                 </div>
             </div>
@@ -83,8 +83,8 @@ export default (props) => {
                     <p className={styles.sectionText}>{props.text}</p>
                     {props.button === 'true' ? (
                         <div className={styles.linkContainer}>
-                            <a className={styles.link} href={props.buttonLink}>{props.buttonText}</a>
-                            <a className={styles.link} href={props.buttonLink2}>{props.buttonText2}</a>
+                            <a target='_blank' className={styles.link} href={props.buttonLink}>{props.buttonText}</a>
+                            <a target='_blank' className={styles.link} href={props.buttonLink2}>{props.buttonText2}</a>
                         </div> ) : ( <></> )}
                 </div>
             </div>
