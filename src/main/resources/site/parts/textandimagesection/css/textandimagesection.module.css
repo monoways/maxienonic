@@ -45,6 +45,13 @@
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
+.htmltextContainer p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #000000;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
 .sectionImage {
     width: 100%;
     height: 100%;

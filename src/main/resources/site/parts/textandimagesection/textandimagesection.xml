@@ -13,6 +13,10 @@
             <occurrences minimum="1" maximum="1"/>
             <default>Lorem ipsum dolor sit amnet</default>
         </input>
+        <input name="testText" type="HtmlArea">
+            <label>Text for the textbox, more customisable than the one above</label>
+            <default><p>Description should be here</p></default>
+        </input>
         <input name="image" type="ImageSelector">
             <label>Image</label>
             <occurrences minimum="1" maximum="1"/>

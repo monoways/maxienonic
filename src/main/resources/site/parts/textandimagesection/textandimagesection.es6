@@ -8,6 +8,7 @@ exports.get = function(request) {
     const props = {
         title: component.config.title,
         text: component.config.text, 
+        testText: portal.processHtml({value: component.config.testText}),
         imagePosition: component.config.imagePosition,
         button: component.config.button,
         buttonLink: component.config.buttonLink,
