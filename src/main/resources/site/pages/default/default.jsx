@@ -61,9 +61,6 @@ import Region from '@enonic/react-components/Region';
 
 export default (props) => {
   const menuItems = props.menuItems.menuItems;
-  // console.log(JSON.stringify(menuItems), 'menuItems.hasChildren');
-  // console.log(JSON.stringify(props.content), 'props.content');
-  // console.log(JSON.stringify(props.breadcrumbItems), 'props.breadcrumItems');
   //testNashornPolyfills();
 
   const menuItemsArray = [];
@@ -98,14 +95,7 @@ export default (props) => {
 
   return (
       <div style={{backgroundColor: props.backgroundColor}} className="default-page">
-          {/* <header className='header'>
-            <img className="header-logo" src={Logo} alt="logo" />
-            <Menu menuItems={menuItems}/>
-            <Burgermenu menuItems={menuItems}/>
-          </header> */}
-          {/* <Header menuItems={menuItems} /> */}
           <Region name='header' regionData={props.regionsData['header']} {...props} />
-          {/* <BannerMenu menuItems={menuItems} /> */}
           {onTemaPath && <TemaMenu menuItems={tema.children} backgroundColor={props.backgroundColor} />}
           {props.breadcrumbItems.items.length > 1 && <BreadcrumbMenu breadcrumbItems={props.breadcrumbItems.items} />}
           <Region name='main'regionData={props.regionsData['main']} {...props} />
@@ -113,4 +103,3 @@ export default (props) => {
       </div>
   );
 };
-// regionData={props.headerRegion}
