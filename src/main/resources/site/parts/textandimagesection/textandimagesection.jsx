@@ -27,7 +27,7 @@ export default (props) => {
                 <div className={styles.sectionTextContainer}>
                     <h1 className={styles.sectionTitle}>{props.title}</h1>
                     <p className={styles.sectionText}>{props.text}</p>
-                    <div dangerouslySetInnerHTML={{__html: props.testText}} />
+                    <div className={styles.htmltextContainer} dangerouslySetInnerHTML={{__html: props.testText}} />
                     {props.button === 'true' ? (
                         <div className={styles.linkContainer}>
                             <a target='_blank' className={styles.link} href={props.buttonLink}>{props.buttonText}</a>
