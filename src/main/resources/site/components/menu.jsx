@@ -1,29 +1,12 @@
 import react from "react";
 
+import flattenMenuArray from "../helpers/flattenmenuarray";
+
 export default ({ menuItems }) => {
     // THIS IS NO LONGER IN USE, BUT IS KEPT FOR REFERENCE
     // THIS MENU WOULD BE USED IF WE WANTED A MENU IN THE HEADER TO THE RIGHT OF THE LOGO
 
-    const menuItemsArray = [];
-    // makes a flat array of all menu items
-    menuItems.forEach((item) => {
-        item.layer = 0;
-        menuItemsArray.push(item);
-        if (item.hasChildren) {
-            item.children.forEach((child) => {
-                child.layer = 1;
-                child.father = item.title;
-                menuItemsArray.push(child);
-                if (child.hasChildren) {
-                    child.children.forEach((child2) => {
-                        child2.father = child.title;
-                        child2.layer = 2;
-                        menuItemsArray.push(child2);
-                    })
-                }
-            })
-        }
-    })
+    const menuItemsArray = flattenMenuArray(menuItems);
 
     // finds the active menu item
     const activeMenuItem = menuItemsArray.find(item => item.isActive);
