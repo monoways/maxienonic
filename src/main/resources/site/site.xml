@@ -13,7 +13,7 @@
     </mapping>
 
     <mapping controller="/controllers/previewBlogpost.js" order="50">
-      <match>type:'com.enonic.example:blogpost'</match>
+      <match>type:'com.example.myproject:blogpost'</match>
     </mapping>
 
     <mapping controller="/lib/urlredirect.js">

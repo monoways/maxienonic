@@ -6,6 +6,8 @@ import TemaMenu from '../../components/temaMenu/temaMenu.jsx';
 import BannerMenu from '../../components/bannermenu/bannermenu.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 
+import flattenMenuArray from '../../helpers/flattenmenuarray.js';
+
 import './css/default.css';
 import Region from '@enonic/react-components/Region';
 
@@ -63,34 +65,12 @@ export default (props) => {
   const menuItems = props.menuItems.menuItems;
   //testNashornPolyfills();
 
-  const menuItemsArray = [];
-  // this loops through three levels of menu items and pushes them to the menuItemsArray to get a flat array of all menu items, 
-  // it also adds a layer property to each item
-  menuItems.forEach((item) => {
-      item.layer = 0;
-      menuItemsArray.push(item);
-      if (item.hasChildren) {
-          item.children.forEach((child) => {
-              child.layer = 1;
-              child.father = item.title;
-              menuItemsArray.push(child);
-              if (child.hasChildren) {
-                  child.children.forEach((child2) => {
-                      child2.father = child.title;
-                      child2.layer = 2;
-                      menuItemsArray.push(child2);
-                  })
-              }
-          })
-      }
-  })
+  const menuItemsArray = flattenMenuArray(menuItems);
 
   const onTemaPath = props.content._path.match(/\/selfi\/brukere\/tema/);
-  // console.log('onTemaPath', onTemaPath);
 
-  // find all menuitems that are children of the element in menuItems that has the title "Brukere"
+  // find all menuitems that are children of the element in menuItems that has the title "Brukere" and find the element in that array that has the title "Tema"
   const brukere = menuItems.find(item => item.title === 'Brukere');
-  // if brukere has children, find the one that has the title "Tema" and return its children
   const tema = brukere && brukere.children && brukere.children.find(item => item.title === 'Tema');
 
   return (

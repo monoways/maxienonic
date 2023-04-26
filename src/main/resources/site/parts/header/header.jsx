@@ -3,6 +3,7 @@ import MobileMenu from '../../components/mobileMenu/MobileMenu.jsx';
 import BannerMenu from '../../components/bannermenu/bannermenu.jsx';
 import MobileTemaMenu from '../../components/temaMenu/mobile/temaMenuMobile.jsx';
 import Logo from '../../../assets/images/logo.svg';
+import flattenMenuArray from "../../helpers/flattenmenuarray.js";
 
 export default (props) => {
     const menuItems = props.menuItems.menuItems;
@@ -15,27 +16,7 @@ export default (props) => {
     // if brukere has children, find the one that has the title "Tema" and return its children
     const tema = brukere && brukere.children && brukere.children.find(item => item.title === 'Tema');
 
-    const menuItemsArray = [];
-    // this loops through three levels of menu items and pushes them to the menuItemsArray to get a flat array of all menu items, 
-    // it also adds a layer property to each item
-    menuItems.forEach((item) => {
-        item.layer = 0;
-        menuItemsArray.push(item);
-        if (item.hasChildren) {
-            item.children.forEach((child) => {
-                child.layer = 1;
-                child.father = item.title;
-                menuItemsArray.push(child);
-                if (child.hasChildren) {
-                    child.children.forEach((child2) => {
-                        child2.father = child.title;
-                        child2.layer = 2;
-                        menuItemsArray.push(child2);
-                    })
-                }
-            })
-        }
-    })
+    const menuItemsArray = flattenMenuArray(menuItems);
 
     return (
         <>
